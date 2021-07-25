@@ -14,15 +14,22 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
-      center: true
+      center: true,
+      padding: {
+        DEFAULT: '2rem'
+        // sm: '2rem',
+        // lg: '4rem',
+        // xl: '5rem',
+        // '2xl': '6rem',
+      }
     },
     screens: {
-      sm: '640px',
+      // sm: '640px',
       md: '768px',
       lg: '1024px',
-      lgs: '1090px',
-      xl: '1280px',
-      '2xl': '1536px'
+      // lgs: '1090px',
+      xl: '1280px'
+      // '2xl': '1536px'
     },
     letterSpacing: {
     //   tightest: '-.075em',
@@ -53,25 +60,32 @@ module.exports = {
         14: '3.50rem',
         15: '3.75rem',
         17: '4.25rem',
+        18: '4.5rem',
         19: '4.75rem',
-        18: '5rem',
+        20: '5rem',
         21: '5.25rem',
         22: '5.50rem',
         23: '5.75rem',
         25: '6.25rem',
+        29: '7.25rem',
         30: '7.5rem',
+        31: '7.75rem',
         33: '8.25rem',
         34: '8.5rem',
         35: '8.75rem',
         37: '9.25rem',
+        43: '10.75rem',
         45: '11.25rem',
+        46: '11.50rem',
         55: '13.75rem',
         128: '32rem',
+        132: '33rem',
         144: '36rem'
       },
       colors: {
         shonwhite: '#fcfcfc',
         customgray: '#DCDCDC',
+        lightgraybr: '#dbdbdb',
         lightgray: '#f4f4f4',
         deepblue: '#21219c',
         black: {
@@ -103,7 +117,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      margin: ['last']
+      margin: ['last'],
+      border: ['last']
     }
   },
   plugins: [
