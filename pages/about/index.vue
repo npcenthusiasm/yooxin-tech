@@ -18,6 +18,7 @@
             <div class="about__list-title mr-9">
               {{ item.title }}
             </div>
+            <!-- eslint-disable vue/no-v-html  -->
             <div v-html="item.desc" />
           </li>
         </ul>
