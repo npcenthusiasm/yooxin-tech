@@ -1,11 +1,21 @@
 <template>
   <div>
-    <div class="container">
-      {{ $route.name }} page
-    </div>
+    <CompanyDesc />
+    <News />
+    <Collaborate />
   </div>
 </template>
 
 <script>
-export default {}
+import CompanyDesc from '@/components/home/CompanyDesc'
+import News from '@/components/home/News'
+import Collaborate from '@/components/home/Collaborate'
+
+export default {
+  components: {
+    CompanyDesc,
+    News,
+    Collaborate
+  }
+}
 </script>
