@@ -1,9 +1,20 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
+  ? {
+      router: {
+        base: '/yooxin-tech/'
+      }
+    }
+  : {}
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
+  // Git deploy 會用到
+  ...routerBase,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
