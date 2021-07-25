@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container grid grid-rows-1 grid-cols-5 gap-5 mt-40 mb-43 justify-between">
+    <div class="container grid grid-rows-1 grid-cols-5 gap-x-5 mt-40 mb-43 justify-between">
       <div class="equipementProduct mb-18" v-for="(item, i) in product" :key="i">
         <div class="productImg">
          <img :src="item.img" alt="" class="mb-5">
