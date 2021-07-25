@@ -1,14 +1,14 @@
 <template>
   <div class="bg-lightgray pt-22 pb-16">
     <div class="container text-center">
-      <button class="relative font-medium py-5 px-40 mb-25 border border-deepblue bg-shonwhite">
+      <nuxt-link to="/contact" class="relative inline-block font-medium py-5 w-full md:w-1/3 mb-25 border border-deepblue bg-shonwhite">
         聯繫我們
         <img loading="lazy" src="@/assets/img/arrow.svg" alt="arrow" class="arrow-icon">
-      </button>
+      </nuxt-link>
 
-      <div class="text-sm">
+      <div class="text-sm text-black-300">
         侑欣科技設計整合有限公司<br>
-        <span class="inline-block text-xs text-black-300 mt-2">Copyright © oooooooooo.com All Rights Reserved.</span>
+        <span class="inline-block text-xs mt-2">Copyright © oooooooooo.com All Rights Reserved.</span>
       </div>
     </div>
   </div>
@@ -24,7 +24,6 @@ export default {
 
 .arrow-icon {
   height: 22px;
-  fill: #21219c;
   position: absolute;
   right: 16px;
   top:50%;

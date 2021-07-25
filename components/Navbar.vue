@@ -1,10 +1,10 @@
 <template>
-  <div class="navbar flex justify-between items-center">
+  <div class="navbar container flex justify-between items-center">
     <div class="flex">
       <nuxt-link to="/" class="logo mr-3" />
       <h1>侑欣科技設計整合有限公司<br><span class="inline-block mt-1 text-sm">Yooxin Technology Co.,Ltd.</span></h1>
     </div>
-    <ul class="flex">
+    <ul class="hidden md:flex">
       <li v-for="(link, index) in links" :key="index" class="font-medium mr-16 last:mr-0">
         <nuxt-link :to="link.to">
           {{ link.name }}
