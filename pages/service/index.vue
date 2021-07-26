@@ -5,9 +5,11 @@
       </div>
     <div class="container">
       <h2 class="text-3xl mb-10 font-medium">
+        <a href="#test">
         成品代工
+        </a>
       </h2>
-      <div class="foundry grid grid-rows-1 grid-cols-5 gap-x-20 mb-9">
+      <div class="foundry grid grid-rows-1 grid-cols-1 xs:grid-cols-3 md:grid-cols-5 gap-x-20 mb-9">
       <div v-for="(item, i) in foundry" :key="i" class="foundryCard mb-19">
         <div class="foundryProduct">
           <div class="productImg">
@@ -38,7 +40,7 @@
       </div>
       </div>
       <hr>
-      <h2 class="text-3xl mb-10 mt-33 font-medium">
+      <h2 class="text-3xl mb-10 mt-33 font-medium" name="testT">
         包裝
       </h2>
       <div class="pack grid grid-rows-1 grid-cols-5 gap-x-20 mb-27">

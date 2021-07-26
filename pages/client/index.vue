@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container grid grid-rows-1 grid-cols-2 gap-x-5 mt-40 mb-48">
+    <div class="container grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-x-5 mt-40 mb-48">
       <div class="clientProduct flex bg-gray-100 py-11 mb-12" v-for="(item, i) in product" :key="i">
         <div class="img px-11">
           <img :src="item.img" alt="">
@@ -10,7 +10,7 @@
           <h2 class="text-1xl mb-4">{{ item.name }}</h2>
           <p class="text-sm text-gray-400 mb-16">{{ item.item.term }} : {{ item.item.termName }}</p>
           <div class="btn flex justify-end">
-          <button class="py-1 px-7 border-2 border-deepblue font-medium text-deepblue text-sm">看看產品</button>
+          <NuxtLink to="#test123"><button class="py-1 px-7 border-2 border-deepblue font-medium text-deepblue text-sm">看看產品</button></NuxtLink>
           </div>
         </div>
       </div>
