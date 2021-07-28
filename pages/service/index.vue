@@ -4,10 +4,8 @@
         <img src="http://fakeimg.pl/1440x286/282828/EAE0D0/" class="mx-auto" alt="">
       </div>
     <div class="container">
-      <h2 class="text-3xl mb-10 font-medium">
-        <a href="#test">
+      <h2 class="text-3xl mb-10 font-medium" id="foundry">
         成品代工
-        </a>
       </h2>
       <div class="foundry grid grid-rows-1 grid-cols-1 xs:grid-cols-3 md:grid-cols-5 gap-x-20 mb-9">
       <div v-for="(item, i) in foundry" :key="i" class="foundryCard mb-19">
@@ -23,7 +21,7 @@
       </div>
       </div>
       <hr>
-      <h2 class="text-3xl mb-10 mt-32 font-medium">
+      <h2 class="text-3xl mb-10 mt-32 font-medium" id="design">
         設計&生產
       </h2>
       <div class="design grid grid-rows-1 grid-cols-5 gap-x-20 mb-26">
@@ -40,7 +38,7 @@
       </div>
       </div>
       <hr>
-      <h2 class="text-3xl mb-10 mt-33 font-medium" name="testT">
+      <h2 class="text-3xl mb-10 mt-33 font-medium" id="pack">
         包裝
       </h2>
       <div class="pack grid grid-rows-1 grid-cols-5 gap-x-20 mb-27">
@@ -155,6 +153,13 @@ export default {
           content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
         }
       ]
+    }
+  },
+  mounted () {
+    const anchor = this.$route.hash
+    if (anchor) {
+      const el = document.querySelector(anchor)
+      setTimeout(function () { el.scrollIntoView() }, 1000)
     }
   }
 }

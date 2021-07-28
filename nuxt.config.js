@@ -1,6 +1,7 @@
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
   ? {
       router: {
+        history: createWebHashHistory(),
         base: '/yooxin-tech/'
       }
     }
@@ -45,6 +46,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/bus.js',
+    //or use this for browser using only
+    {src:'~/plugins/bus.js', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -61,7 +65,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'vue-scrollto/nuxt',
+ 
+        // Or if you have custom options...
+        ['vue-scrollto/nuxt', { duration: 300 }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

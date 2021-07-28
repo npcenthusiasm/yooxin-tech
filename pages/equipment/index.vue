@@ -5,7 +5,7 @@
         <div class="productImg">
          <img :src="item.img" alt="" class="mb-5">
         </div>
-        <span class="title flex justify-center font-medium text-black"><a href="service#testT">{{ item.name }}</a></span>
+        <span class="title flex justify-center font-medium text-black"><a :href="`service#${item.category}`">{{ item.name }}</a></span>
       </div>
     </div>
   </div>
@@ -17,54 +17,67 @@ export default {
     return {
       product: [
         {
+          category: 'foundry',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '空壓機'
         },
         {
+          category: 'foundry',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '熱收縮機'
         },
         {
+          category: 'foundry',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '熱熔機'
         },
         {
+          category: 'foundry',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '地極測試機'
         },
         {
+          category: 'foundry',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '負載測試機'
         },
         {
+          category: 'design',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '自動輸送帶機'
         },
         {
+          category: 'design',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '自動出錫機'
         },
         {
+          category: 'design',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '手動沖床'
         },
         {
+          category: 'design',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '錫爐'
         },
         {
+          category: 'design',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '剝線機'
         },
         {
+          category: 'pack',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '電壓檢測器'
         },
         {
+          category: 'pack',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '恆溫焊槍'
         },
         {
+          category: 'pack',
           img: 'http://fakeimg.pl/240x240/282828/EAE0D0/',
           name: '熱風槍'
         }
