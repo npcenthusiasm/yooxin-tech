@@ -1,38 +1,36 @@
 <template>
   <div>
-     <div class="banner mb-32">
+     <div class="banner mb-25 xs:mb-32 ">
         <img src="http://fakeimg.pl/1440x286/282828/EAE0D0/" class="mx-auto" alt="">
       </div>
-    <div class="container">
-      <h2 class="text-3xl mb-10 font-medium" id="foundry">
+    <div class="container px-7 xs:px-0">
+      <h2 class="text-3xl mb-13 xs:mb-10 font-medium" id="foundry">
         成品代工
       </h2>
-      <div class="foundry grid grid-rows-1 grid-cols-1 xs:grid-cols-3 md:grid-cols-5 gap-x-20 mb-9">
-      <div v-for="(item, i) in foundry" :key="i" class="foundryCard mb-19">
+      <div class="foundry grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-x-5 xs:gap-x-20 mb-5 xs:mb-9">
+      <div v-for="(item, i) in foundry" :key="i" class="foundryCard mb-12 xs:mb-19">
         <div class="foundryProduct">
-          <div class="productImg">
             <img :src="item.img" alt="">
-          </div>
-          <div class="designInfo mt-4">
-            <span class="font-semibold">{{ item.name }}</span>
-            <p class="text-gray-500 mt-2">{{ item.content }}</p>
+          <div class="designInfo mt-3 xs:mt-4">
+            <h3 class="font-semibold">{{ item.name }}</h3>
+            <h3 class="text-gray-500 mt-2">{{ item.content }}</h3>
           </div>
         </div>
       </div>
       </div>
       <hr>
-      <h2 class="text-3xl mb-10 mt-32 font-medium" id="design">
+      <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-32 font-medium" id="design">
         設計&生產
       </h2>
-      <div class="design grid grid-rows-1 grid-cols-5 gap-x-20 mb-26">
-      <div v-for="(item, i) in design" :key="'design'+i" class="designCard">
+      <div class="design grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-x-5 xs:gap-x-20 mb-26">
+      <div v-for="(item, i) in design" :key="'design'+i" class="designCard mb-12 xs:mb-19">
         <div class="designProduct">
-          <div class="productImg">
+          <div class="div">
             <img :src="item.img" alt="">
-          </div>
+            </div>
           <div class="designInfo mt-4">
-            <span class="font-semibold">{{ item.name }}</span>
-            <p class="text-gray-500 mt-2">{{ item.content }}</p>
+            <h3 class="font-semibold">{{ item.name }}</h3>
+            <h3 class="text-gray-500 mt-2">{{ item.content }}</h3>
           </div>
         </div>
       </div>
@@ -41,15 +39,13 @@
       <h2 class="text-3xl mb-10 mt-33 font-medium" id="pack">
         包裝
       </h2>
-      <div class="pack grid grid-rows-1 grid-cols-5 gap-x-20 mb-27">
-      <div v-for="(item, i) in pack" :key="'pack'+i" class="packCard">
+      <div class="pack grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-x-5 xs:gap-x-20 mb-25 xs:mb-27">
+      <div v-for="(item, i) in pack" :key="'pack'+i" class="packCard mb-12 xs:mb-19">
         <div class="packProduct">
-          <div class="productImg">
             <img :src="item.img" alt="">
-          </div>
           <div class="packInfo mt-4">
-            <span class="font-semibold">{{ item.name }}</span>
-            <p class="text-gray-500 mt-2">{{ item.content }}</p>
+            <h3 class="font-semibold">{{ item.name }}</h3>
+            <h3 class="text-gray-500 mt-2">{{ item.content }}</h3>
           </div>
         </div>
       </div>
@@ -164,3 +160,8 @@ export default {
   }
 }
 </script>
+<style>
+.banner>img{
+  height: 286px;
+}
+</style>
