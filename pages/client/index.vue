@@ -7,7 +7,7 @@
           <li class="mb-0">{{ item.brand }}</li>
           <li class="text-base xs:text-1xl">{{ item.name }}</li>
         </ul>
-        <div class="content xs:mr-11">
+        <div class="content mt-6 xs:mt-0 xs:mr-11">
           <h4 class="text-base xs:text-sm text-left text-gray-400 px-7 xs:px-0" >{{ item.item.term }} : {{ item.item.termName }}</h4>
           <div class="btn m-6 mb-8 xs:m-0 xs:mt-15 flex flex-col items-end">
           <NuxtLink to="#test123" class="w-full xs:w-5/12 py-3 xs:py-1 px-7 xs:px-0 border-2 border-deepblue font-medium text-deepblue text-base xs:text-sm text-center "><button >看看產品</button></NuxtLink>
