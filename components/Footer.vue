@@ -1,14 +1,39 @@
 <template>
-  <div class="bg-lightgray pt-22 pb-16">
-    <div class="container text-center">
-      <nuxt-link to="/contact" class="relative inline-block font-medium py-5 w-full md:w-1/3 mb-25 border border-deepblue bg-shonwhite">
-        聯繫我們
-        <img loading="lazy" src="@/assets/img/arrow.svg" alt="arrow" class="arrow-icon">
-      </nuxt-link>
+  <div class="bg-lightgray pt-20 pb-6">
+    <div class="container">
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/4 mb-17 md:mb-0">
+          <div class="mb-6 font-medium">
+            聯繫方式
+          </div>
+          <ul>
+            <li class="mb-3">
+              00-0000000
+            </li>
+            <li class="mb-3">
+              oooooo@gmail.com
+            </li>
+          </ul>
+        </div>
 
-      <div class="text-sm text-black-300">
-        侑欣科技設計整合有限公司<br>
-        <span class="inline-block text-xs mt-2">Copyright © oooooooooo.com All Rights Reserved.</span>
+        <div class="w-full md:w-1/4">
+          <div class="mb-6 font-medium">
+            技術合作夥伴
+          </div>
+          <ul>
+            <li class="mb-3">
+              晟宇資訊
+            </li>
+            <li class="mb-3">
+              曜泰國際
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-33 md:pt-22 text-sm text-black-300 text-center md:text-right">
+        <!-- 侑欣科技設計整合有限公司<br> -->
+        <span class="inline-block text-xs mt-2">Copyright © yooxin-tech.com All Rights Reserved.</span>
       </div>
     </div>
   </div>

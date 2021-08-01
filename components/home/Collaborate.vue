@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-22 pb-46 px-7">
+  <div class="container pt-18 md:pt-23 pb-46">
     <div class="collaborate">
       <h2 class="collaborate__title mb-12 text-center">
         合作客戶

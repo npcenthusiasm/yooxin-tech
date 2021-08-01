@@ -34,7 +34,7 @@ export default {
 <style lang="css">
 
 .navbar {
-  height: 105px;
+  height: 104px;
 }
 
 .logo {

@@ -4,12 +4,13 @@
 
 @layer base {
 
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+
   body {
-    /* font-family: Avenir, Nunito Sans, sans-serif; */
-    /* line-height: 1.7; */
-    /* letter-spacing: 0.3px; */
+    font-family: Avenir, Noto Sans TC, Nunito Sans, sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
     background-color: #fcfcfc;
-    min-height: 100vh;
     @apply text-black-900;
   }
 

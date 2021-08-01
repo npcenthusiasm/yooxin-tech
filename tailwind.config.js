@@ -15,23 +15,30 @@ module.exports = {
   theme: {
     container: {
       center: true,
-    //   padding: {
-    //   //   DEFAULT: '2rem'
-    //   //   // sm: '2rem',
-    //   //   // lg: '4rem',
-    //   //   // xl: '5rem',
-    //   //   // '2xl': '6rem',
-    //   // }
+      screens: {
+        sm: '584px',
+        md: '712px',
+        lg: '968px',
+        xl: '1224px',
+        '2xl': '1336px'
+      },
+      // maxWidth: {
+      // },
+      padding: {
+        DEFAULT: '28px'
+        // sm: '2rem',
+        // lg: '4rem',
+        // xl: '5rem',
+        // '2xl': '6rem',
+      }
     },
     screens: {
-      sm: '640px',
       xs: '414px',
+      sm: '640px',
       md: '768px',
       lg: '1024px',
-      // lgs: '1090px',
       xl: '1280px',
-      // '2xl': '1440px'
-      // '2xl': '1536px'
+      '2xl': '1536px'
     },
     letterSpacing: {
     //   tightest: '-.075em',
@@ -48,15 +55,15 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        xss: ['10px', '1.7'],
-        xs: ['12px', '1.7'],
-        sm: ['14px', '1.7'],
-        base: ['16px', '1.7'],
-        lg: ['18px', '1.7'],
-        xl: ['20px', '1.7'],
-        '1xl': ['22px', '1.7'],
-        '2xl': ['24px', '1.7'],
-        '3xl': ['24px', '1.7'],
+        xss: ['10px', '1'],
+        xs: ['12px', '1'],
+        sm: ['14px', '1'],
+        base: ['16px', '1'],
+        lg: ['18px', '1'],
+        xl: ['20px', '1'],
+        '1xl': ['22px', '1'],
+        '2xl': ['24px', '1'],
+        '3xl': ['24px', '1']
       },
       spacing: {
         13: '3.25rem',
