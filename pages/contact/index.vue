@@ -1,5 +1,5 @@
 <template>
-  <div class="contact pt-29 pb-43">
+  <div class="contact pt-20 md:pt-29 pb-43">
     <div class="container">
       <div class="flex flex-col md:flex-row justify-between">
         <div class="contact__compnay-info mb-10 md:mb-0 md:1/2 lg:w-1/4">
@@ -58,7 +58,7 @@
             </div>
 
             <div class="text-right">
-              <button type="submit" class="text-white bg-deepblue px-20 py-3">
+              <button type="submit" class="w-full md:w-49 text-white bg-deepblue px-20 py-3">
                 提交
               </button>
             </div>
