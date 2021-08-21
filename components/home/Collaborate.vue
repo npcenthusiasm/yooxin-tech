@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-22 pb-46">
+  <div class="container pt-22 pb-46 px-7">
     <div class="collaborate">
       <h2 class="collaborate__title mb-12 text-center">
         合作客戶
@@ -18,12 +18,15 @@
 export default {
   data () {
     return {
-      items: [
-        { img: '', alt: '' },
-        { img: '', alt: '' },
-        { img: '', alt: '' },
-        { img: '', alt: '' },
-        { img: '', alt: '' }
+      items: [{
+        img: require('~/assets/img/HomeImg/client 01.svg')
+      },
+      {
+        img: require('~/assets/img/HomeImg/client 02.svg')
+      },
+      {
+        img: require('~/assets/img/HomeImg/client 03.svg')
+      }
       ]
     }
   }

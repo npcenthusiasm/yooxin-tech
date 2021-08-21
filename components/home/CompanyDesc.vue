@@ -1,20 +1,19 @@
 <template>
-  <div class="bg-lightgray pt-22 pb-23">
-    <div class="container">
+  <div class="bg-lightgray pt-22 pb-27 ">
+    <div class="container  px-7">
       <div>
-        <p class="company__desc mb-8">
-          侑欣科技成立於 2012 年 9 月，初期為 IC 代測加工廠起家，之後再進入記憶體產業從事 FLASHIC、晶片代測、晶片買賣。<br>
-          為了能更全方位及服務更多客戶群，另再成立 3C 成品電子組裝、包裝、PCB 焊接、各類產品加工及包材 ; 在ID 設計、MD 設計、模具開發、塑膠射出上都有專業優良團隊著手服務 ; 除了研發以外也有完整的代工代料服務，包括產品資料核對、客供料 (consign) 物料、進料檢驗、倉儲及庫存管理、組裝、包裝、出貨檢驗等一條龍服務。客戶不需再依製程分包不同代工廠，減少品質管控上的風險，提升產品競爭力。
+        <p class="company__desc mb-6 lg:mb-18 lg:px-44 text-xl">
+          以成品代工服務為核心，串連起設計生產及包材服務，透過優秀的專業團隊為客戶代勞。讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，降低成本以提升產品競爭力。
         </p>
       </div>
 
       <ul class="descgroup grid grid-rows-1 grid-cols-1 md:grid-cols-3 gap-5">
         <li v-for="item in descriptionGroup" :key="item.title" class="pt-7 pb-6 flex items-center border border-deepblue">
-          <div class="descgroup__title w-1/2 text-deepblue text-1xl text-center text-medium">
+          <div class="descgroup__title w-1/2 text-deepblue text-1xl text-center font-medium">
             {{ item.title }}
           </div>
           <ul class="w-1/2">
-            <li v-for="desc in item.items" :key="desc.title" class="descgroup__desc mb-6 last:mb-0">
+            <li v-for="desc in item.items" :key="desc.title" class="descgroup__desc mb-6 last:mb-0 flex flex-wrap">
               {{ desc.title }}
             </li>
           </ul>
@@ -31,7 +30,7 @@ export default {
       descriptionGroup: [
         {
           title: '成品代工',
-          items: [{ title: '成品組裝' }, { title: '品檢' }, { title: '包裝出貨' }]
+          items: [{ title: '3C 電子組裝' }, { title: 'PCB 焊接' }, { title: '熱縮包裝' }, { title: '各類手加工' }]
         },
         {
           title: '設計生產',

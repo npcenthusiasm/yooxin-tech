@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-23 pb-15">
+  <div class="container pt-23 pb-15 px-7">
     <div class="news">
       <h2 class="news__title mb-10 text-center">
         最新消息
@@ -27,9 +27,9 @@ export default {
   data () {
     return {
       items: [
-        { date: '2021.07.10', title: '調整產線', description: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘' },
-        { date: '2021.06.16', title: '敘述敘述', description: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘' },
-        { date: '2021.05.19', title: '敘述敘述', description: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘' }
+        { date: '2021.07.10', title: '產線場地規劃', description: '擴充生產線場地-3條 / 倉庫擴充' },
+        { date: '2021.06.16', title: '產線擴充', description: '新增一條 8 米產線工作桌' },
+        { date: '2021.05.19', title: '添購新機', description: 'USB 延長線電測儀器交機' }
       ]
     }
   }
