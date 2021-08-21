@@ -155,7 +155,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss" scoped>
 img{
   max-width: 192px;
   max-height: 192px;
