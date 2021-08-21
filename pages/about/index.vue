@@ -4,8 +4,7 @@
       <div class="about__carsoul about__carsoul-content md:w-132 bg-lightgray mb-5 md:mb-0 md:mr-31">
         <div class="" />
       </div>
-
-      <div class="about__desc">
+      <div class="about__desc ml-5">
         <div class="mb-8 md:pr-10 pb-8 border-b border-lightgray">
           <p class="mb-5">
             侑欣設立於 2012 年，為 IC 代測加工廠起家，之後進入記憶體產業從事 FLASH IC、積體電路、晶片買賣等。成立以來，一直秉持著「服務」、「專業」、「創新」的宗旨服務客戶，在資訊電子業產銷分工結構模式中，扮演著橋樑角色。
@@ -67,5 +66,4 @@ export default {
   }
 
 }
-
 </style>

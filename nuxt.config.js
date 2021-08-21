@@ -48,7 +48,6 @@ export default {
   plugins: [
     '~/plugins/bus.js',
     //or use this for browser using only
-    {src:'~/plugins/bus.js', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -65,11 +64,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    'vue-scrollto/nuxt',
- 
-        // Or if you have custom options...
-        ['vue-scrollto/nuxt', { duration: 300 }],
+    '@nuxtjs/axios'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
