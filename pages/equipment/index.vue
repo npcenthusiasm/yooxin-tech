@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="container grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-x-5 mt-23 xs:mt-40 mb-17 xs:mb-25 xs:justify-between px-7 xs:px-0" >
+    <div class="container grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-x-5 mt-23 xs:mt-40 mb-17 xs:mb-25 xs:justify-between px-7 lg:px-0" >
       <div class="equipementProduct mb-8 xs:mb-21" v-for="(item, i) in product" :key="i">
-         <img :src="item.img" alt="" class="mb-3 xs:mb-4">
+         <img :src="item.img" alt="" class="mb-3 lg:mb-4">
         <h3 class="title flex xs:justify-center font-semibold xs:font-medium text-black"><a :href="`service#${item.category}`">{{ item.name }}</a></h3>
       </div>
     </div>
@@ -84,6 +84,16 @@ img{
 .title{
 font-family: PingFangTC;
 color: #27272d;
+}
+
+@media screen and (max-width:768px) {
+img{
+  max-width: 192px;
+  max-height: 192px;
+}
+.title{
+  max-width: 192px;
+}
 }
 
 @media screen and (max-width:375px) {

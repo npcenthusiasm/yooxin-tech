@@ -3,11 +3,11 @@
      <!-- <div class="banner mb-25 xs:mb-32 ">
         <img src="http://fakeimg.pl/1440x286/282828/EAE0D0/" class="mx-auto" alt="">
       </div> -->
-    <div class="container px-7 xs:px-0 mt-30 xs:mt-33 mb-12 xs:mb-24">
-      <h2 class="text-3xl mb-13 xs:mb-10 font-medium" id="foundry">
+    <div class="container px-7 lg:px-0 mt-30 xs:mt-33 mb-12 xs:mb-24">
+      <h2 class="text-3xl mb-13 xs:mb-10 font-medium md:pl-4 lg:pl-0" id="foundry">
         成品代工
       </h2>
-      <div class="foundry grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-x-5 xs:gap-x-20 mb-5 xs:mb-9">
+      <div class="foundry grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-x-5 xs:gap-x-20 mb-5 xs:mb-9 md:px-4 lg:px-0">
       <div v-for="(item, i) in foundry" :key="i" class="foundryCard mb-12 xs:mb-19">
         <div class="foundryProduct">
             <img :src="item.img" alt="">
@@ -19,11 +19,11 @@
       </div>
       </div>
       <hr>
-      <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium" id="design">
+      <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="design">
         設計&生產
       </h2>
-      <div class="design grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-x-5 xs:gap-x-20 mb-5 xs:mb-26">
-      <div v-for="(item, i) in design" :key="'design'+i" class="designCard mb-12 xs:mb-0">
+      <div class="design grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-x-5 xs:gap-x-20 mb-5 xs:mb-26 md:px-4 lg:px-0">
+      <div v-for="(item, i) in design" :key="'design'+i" class="designCard mb-12 lg:mb-0">
         <div class="designProduct">
           <div class="div">
             <img :src="item.img" alt="">
@@ -36,10 +36,10 @@
       </div>
       </div>
       <hr>
-      <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium" id="pack">
+      <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="pack">
         包裝
       </h2>
-      <div class="pack grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-x-5 xs:gap-x-20">
+      <div class="pack grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-x-5 xs:gap-x-20 md:px-4 lg:px-0">
       <div v-for="(item, i) in pack" :key="'pack'+i" class="packCard mb-12 xs:mb-0">
         <div class="packProduct">
             <img :src="item.img" alt="">
