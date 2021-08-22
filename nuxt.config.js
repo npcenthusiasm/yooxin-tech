@@ -37,7 +37,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      {
+        src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDzhToCf53rPcF3TUj9RemfBkdCRrI2JAU&callback=initMap", async: true
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
