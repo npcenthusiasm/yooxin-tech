@@ -22,7 +22,7 @@
 
 
       <div class="about-desc">
-        <div class="mb-8 md:pr-10">
+        <div class="mb-12 md:mb-8 md:pr-10">
           <p class="mb-6">
             侑欣設立於 2012 年，以 IC 代測加工廠起家，之後進入記憶體產業從事 FLASH IC、積體電路、晶片買賣等，在資訊電子業產銷分工結構模式中，扮演著橋樑角色。
           </p>
@@ -32,10 +32,10 @@
           <p>另外在 ID 設計、MD 設計、模具開發、塑膠射出上也都有專業團隊合作。</p>
         </div>
 
-        <div style="height: 1px" class="mb-11 w-full bg-lightgraybr" />
+        <div style="height: 1px" class="mb-13 md:mb-11 w-full bg-lightgraybr" />
 
-        <ul class="about-list text-sm md:pr-10">
-          <li v-for="(item, index) in items" :key="index" class="flex mb-1 last:mb-0">
+        <ul class="about-list text-base md:text-sm md:pr-10">
+          <li v-for="(item, index) in items" :key="index" class="flex mb-2 md:mb-1 last:mb-0">
             <div class="title mr-9">
               {{ item.title }}
             </div>
@@ -119,7 +119,10 @@ export default {
 }
 </script>
 
+
 <style lang="scss" scoped>
+
+@import '~/assets/scss/rwd';
 
 .about {
 
@@ -159,6 +162,7 @@ export default {
   // }
 
   .about-desc {
+    letter-spacing: 0.8px;
     line-height: 28px;
   }
 
@@ -166,8 +170,12 @@ export default {
     line-height: 28px;
 
     .title {
-      flex-basis: 60px;
+      flex-basis: 70px;
       flex-shrink: 0;
+
+      @include ipad {
+        flex-basis: 60px;
+      }
     }
   }
 

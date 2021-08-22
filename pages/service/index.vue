@@ -1,6 +1,6 @@
 <template>
   <div class="service-page">
-     <!-- <div class="banner mb-25 xs:mb-32 ">
+    <!-- <div class="banner mb-25 xs:mb-32 ">
         <img src="http://fakeimg.pl/1440x286/282828/EAE0D0/" class="mx-auto" alt="">
       </div> -->
     <div class="container mt-30 xs:mt-33 mb-12 xs:mb-24">
@@ -8,7 +8,7 @@
         成品代工
       </h2> -->
       <ProductsGridTitle title="成品代工" id="foundry" />
-      <ProductsGrid :items="foundry"/>
+      <ProductsGrid :items="foundry" class=""/>
       <!-- <div class="grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-20 xs:gap-20 mb-5 xs:mb-9 md:px-4 lg:px-0">
         <div v-for="(item, i) in foundry" :key="i" class="">
           <div class="product">
@@ -20,7 +20,7 @@
           </div>
         </div>
       </div> -->
-      <hr class="mb-28">
+      <hr class="mb-22 md:mb-28">
       <!-- <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="design">
         
       </h2> -->
@@ -40,7 +40,7 @@
         </div>
       </div>
       </div> -->
-        <hr class="mb-28">
+      <hr class="mb-22 md:mb-28">
       <!-- <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="pack">
         
       </h2> -->
@@ -173,29 +173,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .service-page {
-  .product {
-    .desc {
-      // color: #DCDCDC;
-      // color: #F4F4F4;
-      // #27272D / 35%
-      // color: rgba(39, 39, 45, 100%);
-      color: rgba(39, 39, 45, 50%);
-      // color: rgba(39, 39, 45, 35%);
-    }
-  }
-  img{
-    max-width: 192px;
-    max-height: 192px;
-  }
-  .banner>img{
-    height: 286px;
-  }
-  
-  @media screen and (max-width:375px) {
-    img{
-      max-width: 150px;
-      max-height: 150px;
-    }
-  }
+
 }
 </style>
