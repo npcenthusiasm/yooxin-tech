@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="container grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-x-5 mt-23 xs:mt-40 mb-32 xs:mb-48 px-7 lg:px-0">
+    <div class="container grid grid-rows-1 grid-cols-1 lg:grid-cols-2 gap-x-5 mt-23 xs:mt-40 mb-32 xs:mb-48 px-7 lg:px-0">
       <div class="clientProduct flex bg-backgroundgray mb-5 xs:mb-12 md:p-4 lg:p-0" v-for="(item, i) in product" :key="i">
         <img :src="item.img" alt="" class="productImg mt-6 ml-6 mr-9 md:m-4 lg:m-11 xs:mr-10">
-        <ul class="info mt-14 mr-14 xs:m-0 xs:mt-11 xs:mr-0">
-          <li class="mb-1 lg:mb-2">{{ item.brand }}</li>
+        <ul class="info mt-14 mr-14 xs:m-0 sm:mt-7 lg:mt-11 xs:mr-0 sm:ml-6 lg:ml-0">
+          <li class="mb-1 sm:mb-2">{{ item.brand }}</li>
           <li class="text-base xs:text-1xl">{{ item.name }}</li>
         </ul>
-        <div class="content mt-6 xs:mt-0 lg:mr-16">
+        <div class="content mt-6 xlg:mt-0 sm:mr-16">
           <h4 class="text-base xs:text-sm text-left text-titlegray px-6 lg:px-0" >{{ item.item.term }} : {{ item.item.termName }} </h4>
-          <div class="btn m-6 mb-8 xs:m-0 xs:mt-11 flex flex-col items-end">
-          <NuxtLink to="#test123" class="w-full xs:w-5/12 py-3 xs:py-2 px-8 xs:px-0 border-2 border-deepblue font-medium text-deepblue text-base xs:text-sm text-center "><button >看看產品</button></NuxtLink>
+          <div class="btn m-6 mb-8 xs:m-0 xs:mt-11 flex flex-col xlg:items-end md:ml-7 lg:ml-0">
+          <NuxtLink to="#test123" class="w-full sm:w-11/12  lg:mb-4 xlg:mb-0 xlg:w-5/12 py-3 md:py-2 px-8 md:px-0 border-2 border-deepblue font-medium text-deepblue text-base xs:text-sm text-center "><button >看看產品</button></NuxtLink>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ img{
 .content{
   grid-area: content;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:640px) {
   .clientProduct{
    grid-template-areas:  "img img info info"
                          "img img info info"
@@ -88,10 +88,17 @@ img{
 }
 }
 
+@media screen and (max-width:1120px) {
+img{
+  max-width: 190px;
+  max-height: 190px;
+}
+}
+
 @media screen and (max-width:768px) {
 img{
-  max-width: 192px;
-  max-height: 1920px;
+  max-width: 150px;
+  max-height: 150px;
 }
 }
 
