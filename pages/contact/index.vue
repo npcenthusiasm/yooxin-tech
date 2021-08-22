@@ -1,19 +1,21 @@
 <template>
-  <div class="contact pt-29 pb-43">
+  <div class="contact-page pt-20 md:pt-29 pb-43">
     <div class="container">
       <div class="flex flex-col md:flex-row justify-between">
-        <div class="contact__compnay-info mb-10 md:mb-0 md:1/2 lg:w-1/4">
-          <h2 class="font-medium mb-8">
-            公司資訊
-          </h2>
-          <ul class="contact__list">
+        <div class="compnay-info mb-10 md:mb-0 md:w-1/2 md:mr-15 lg:mr-10" style="max-width: 416px">
+          <h2 class="area-title mb-12 md:mb-8">公司資訊</h2>
+          <ul class="contact-list">
             <li class="flex mb-6">
               <span class="title">電話</span>
-              <span>00-0000000</span>
+              <span>02-2999-2935</span>
+            </li>
+            <li class="flex mb-6">
+              <span class="title">手機</span>
+              <span>0932-207-962 ( 李先生 )</span>
             </li>
             <li class="flex mb-6">
               <span class="title">Email</span>
-              <span>oooooo@gmail.com</span>
+              <span>dennis@yooxin.com.tw</span>
             </li>
             <li class="flex mb-6">
               <span class="title">地址</span>
@@ -22,11 +24,12 @@
           </ul>
           <iframe src="https://snazzymaps.com/embed/327926" width="100%" height="260px" style="border:none;" />
         </div>
+    <!-- </div> -->
+
+    <!-- <div class="container"> -->
 
         <div class="contact__form md:w-1/2">
-          <h2 class="font-medium mb-8">
-            表單填寫
-          </h2>
+          <h2 class="area-title mb-12 md:mb-8">表單填寫</h2>
 
           <form class="contact__list">
             <div class="mb-5">
@@ -58,13 +61,14 @@
             </div>
 
             <div class="text-right">
-              <button type="submit" class="text-white bg-deepblue px-20 py-3">
+              <button type="submit" class="w-full md:w-49 text-white bg-deepblue px-20 py-3">
                 提交
               </button>
             </div>
           </form>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -75,41 +79,45 @@ export default {}
 
 <style lang="scss" scoped>
 
-.contact {
-  h2 {
-    @apply text-2xl pb-6 border-b border-lightgraybr;
 
+.contact-page {
+
+  .area-title {
+    @apply text-4xl md:text-2xl pb-6 border-b border-lightgraybr;
+    // font-weight: 500;
     line-height: 28px;
-
   }
-  &__list {
+
+  .contact-list {
     .title {
       flex-basis: 88px;
       flex-shrink: 0;
     }
   }
-}
 
-.contact__form {
-  label {
-    display: block;
-  }
-
-  input, textarea {
-    @apply w-full border rounded-sm bg-shonwhite border-lightgraybr pl-2;
-    &:focus {
-      outline: none;
+  
+  .contact__form {
+    label {
+      display: block;
     }
-    min-height: 48px;
-  }
-
-  textarea {
-    resize: none;
-  }
-
-  .title {
-    @apply mb-1;
+  
+    input, textarea {
+      @apply w-full border rounded-sm bg-shonwhite border-lightgraybr pl-2;
+      &:focus {
+        outline: none;
+      }
+      min-height: 48px;
+    }
+  
+    textarea {
+      resize: none;
+    }
+  
+    .title {
+      @apply mb-1;
+    }
   }
 }
+
 
 </style>

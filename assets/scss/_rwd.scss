@@ -1,0 +1,39 @@
+$large-desktop: 1536px;
+$desktop:1280px;
+$laptop:1024px;
+$ipad:768px;
+$tablet: 640px;
+
+// 需要參照 tailwind.config.js 斷點才會統一
+
+
+@mixin large-desktop() {
+  @media (min-width: $large-desktop) {
+    @content;
+  }
+}
+
+
+@mixin desktop() {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin ipad() {
+  @media (min-width: $ipad) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}

@@ -1,7 +1,7 @@
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
   ? {
       router: {
-        history: createWebHashHistory(),
+        // history: createWebHashHistory(),
         base: '/yooxin-tech/'
       }
     }
@@ -12,7 +12,7 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'static' : 'server',
 
   // Git deploy 會用到
   ...routerBase,
@@ -42,12 +42,17 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // import style (>= Swiper 6.x)
+    // 如果要用 swiper css
+    { src: "swiper/swiper-bundle.css" }
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/bus.js',
-    //or use this for browser using only
+    // 如果要用 swiper js
+    { src: '~/plugins/VueAwesomeSwiper.js', mode: 'client'}
+    // or use this for browser using only
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -56,7 +61,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss'
   ],

@@ -1,9 +1,11 @@
 <template>
   <div>
-    <div class="container grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-x-5 mt-23 xs:mt-40 mb-17 xs:mb-25 xs:justify-between px-7 lg:px-0" >
+    <div class="container grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-5 mt-23 xs:mt-40 mb-17 xs:mb-25 xs:justify-between" >
       <div class="equipementProduct mb-8 xs:mb-21" v-for="(item, i) in product" :key="i">
-         <img :src="item.img" alt="" class="mb-3 lg:mb-4">
-        <h3 class="title flex xs:justify-center font-semibold xs:font-medium text-black"><a :href="`service#${item.category}`">{{ item.name }}</a></h3>
+        <div class="mx-auto">
+          <img :src="item.img" :alt="item.name" class="mb-3 lg:mb-4">
+        </div>
+        <h3 class="title flex xs:justify-center font-medium xs:font-medium text-dark"><a :href="`service#${item.category}`">{{ item.name }}</a></h3>
       </div>
     </div>
   </div>
@@ -77,29 +79,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img{
-  max-width: 240px;
-  max-height: 240px;
-}
-.title{
-font-family: PingFangTC;
-color: #27272d;
-}
 
-@media screen and (max-width:768px) {
-img{
-  max-width: 192px;
-  max-height: 192px;
-}
-.title{
-  max-width: 192px;
-}
-}
+@import '~/assets/scss/rwd';
 
-@media screen and (max-width:375px) {
 img{
+  width: 100%;
   max-width: 150px;
   max-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include ipad {
+    max-width: 240px;
+    max-height: 240px;
+  }
 }
+
+
+.title{
+// font-family: PingFangTC;
+  // color: #27272d;
 }
+
+// @media screen and (max-width:768px) {
+// img{
+//   max-width: 192px;
+//   max-height: 192px;
+// }
+// .title{
+//   max-width: 192px;
+// }
+// }
+
+// @media screen and (max-width:375px) {
+// img{
+//   max-width: 150px;
+//   max-height: 150px;
+// }
+// }
 </style>
