@@ -2,7 +2,7 @@
   <div class="bg-lightgray pt-20 pb-6">
     <div class="container">
       <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w-1/4 mb-17 md:mb-0">
+        <div class="w-full md:w-1/3 lg:w-1/4 mb-17 md:mb-0">
           <div class="mb-6 font-medium">聯繫方式</div>
           <ul>
             <li class="mb-3">02-2999-2935</li>
@@ -10,7 +10,7 @@
           </ul>
         </div>
 
-        <div class="w-full md:w-1/4">
+        <div class="w-full md:w-1/3 lg:w-1/4">
           <div class="mb-6 font-medium">技術合作夥伴</div>
           <ul>
             <li class="mb-3">晟宇資訊</li>
