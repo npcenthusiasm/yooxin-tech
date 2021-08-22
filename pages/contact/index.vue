@@ -57,7 +57,7 @@
               <label class="title" for="content">
                 內容
               </label>
-              <textarea id="content" name="content" cols="30" rows="8" class="ppearance-none" />
+              <textarea id="content" name="content" cols="30" rows="8" class="appearance-none" />
             </div>
 
             <div class="text-right">
