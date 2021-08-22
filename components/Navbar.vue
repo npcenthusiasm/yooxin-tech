@@ -35,10 +35,12 @@
     <div class="mobile-nav flex md:hidden">
       <div class="relative w-full">
         <div class="container flex justify-between items-center">
-          <h1 class="h1-logo">
-            <nuxt-link to="/" class="mobile-navbar-logo">
-              侑欣科技設計整合有限公司
-            </nuxt-link>
+          <h1 class="">
+            <!-- <nuxt-link to="/" class="mobile-navbar-logo"> -->
+              <!-- 侑欣科技設計整合有限公司 -->
+            <!-- </nuxt-link> -->
+            <img class="mobile-navbar-logo" src="~assets/img/logo/logo_web.svg" alt=""  srcset="">
+            
           </h1>
           <div class="block lg:hidden">
             <Burger
@@ -54,7 +56,8 @@
         </ul>
       </div>
     </div>
-    <div style="height:80px" class="w-full md:hidden"></div>
+    <div style="height:76px" class="w-full md:hidden"></div>
+    <div style="height:76px" class="hidden w-full md:block"></div>
   </div>
 </template>
 
@@ -109,24 +112,32 @@ export default {
   .navbar-logo3 {
     img {
       width: 100%;
-      height: 50px;
+      height: 45px;
     }
   }
 
   .mobile-navbar-logo {
 
-    background-image: url('~assets/img/logo/logo_mobile.svg');
-    text-indent: 101%;
-    overflow:hidden;
-    background-repeat: no-repeat;
-    white-space: nowrap;
-    float:left;
-    height: 45px;
+    // background-image: url('~assets/img/logo/logo_mobile.svg');
+    // background-image: url('~assets/img/logo/logo_web.svg');
+
+    // text-indent: 101%;
+    // overflow:hidden;
+    // background-repeat: no-repeat;
+    // white-space: nowrap;
+    // float:left;
+    // height: 45px;
+    height: 40px;
 
   }
   
   .desktop-nav {
-    height: 105px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fcfcfc;
+    height: 76px;
     // display: flex;
     align-items: center;
 
@@ -141,7 +152,7 @@ export default {
     // display: flex;
     align-items: center;
     background-color: #fcfcfc;
-    height: 80px;
+    height: 76px;
 
     .mobile-nav-menu {
       position: absolute;

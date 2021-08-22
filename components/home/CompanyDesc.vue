@@ -1,9 +1,10 @@
 <template>
-  <div class="company-desc-wrapper pt-11 pb-19 md:pt-22 md:pb-23">
+  <div class="company-desc-wrapper pt-13 pb-19 md:pt-22 md:pb-23">
     <div class="container">
       <div>
-        <p class="company-desc text-lg md:text-xl mb-6 lg:mb-18 lg:px-44 text-center">
-          以成品代工服務為核心，串連起設計生產及包材服務，透過優秀的專業團隊為客戶代勞。<br class="hidden md:block">讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，降低成本以提升產品競爭力。
+        <p class="company-desc text-lg md:text-xl mb-10 lg:mb-18 lg:px-44 text-center">
+          以成品代工服務為核心，串連起設計生產及包材服務，並透過優秀的專業團隊為客戶代勞；讓客戶不需再依製程分包不同代工廠，減少品質管控的風險，降低成本以提升產品競爭力。
+          <!-- <br class="hidden md:block"> -->
         </p>
       </div>
 
@@ -28,6 +29,7 @@
             {{ item.title }}
           </div>
           <ul class="descgroup-list  lg:pl-8 lg:p-6 w-3/4 lg:w-1/2 flex flex-wrap justify-between">
+          <!-- @mousedown="handleActive" -->
             <li v-for="desc in item.items" :key="desc.title" class="descgroup-desc mb-1 lg:mb-3 w-1/2 lg:w-full last:mb-0">
               {{ desc.title }}
             </li>
@@ -65,6 +67,9 @@ export default {
   methods: {
     goPage (target) {
       this.$router.push({ name: 'service', query: { anchor: target } })
+    },
+    handleActive () {
+      t
     }
   }
 }
@@ -82,6 +87,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     transition: background-color .2s ease-in-out;
     
     .descgroup-title,
@@ -103,7 +109,10 @@ export default {
   
   .company-desc {
     line-height: 35px;
-    letter-spacing: 1px;
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    // letter-spacing: 1px;
   }
   
   .descgroup {
@@ -114,6 +123,7 @@ export default {
       letter-spacing: 1.1px;
       flex-basis: 36px;
       flex-shrink: 0;
+      margin-right: 20px;
   
       @include ipad {
         flex-basis: initial;

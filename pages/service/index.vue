@@ -3,7 +3,7 @@
     <!-- <div class="banner mb-25 xs:mb-32 ">
         <img src="http://fakeimg.pl/1440x286/282828/EAE0D0/" class="mx-auto" alt="">
       </div> -->
-    <div class="container mt-20 xs:mt-33 mb-12 xs:mb-24">
+    <div class="container mt-13 xs:mt-22 mb-12 xs:mb-24">
       <!-- <h2 class="text-4xl mb-13 xs:mb-10 md:pl-4 lg:pl-0" id="foundry">
         成品代工
       </h2> -->
@@ -20,7 +20,7 @@
           </div>
         </div>
       </div> -->
-      <hr class="mb-22 md:mb-28">
+      <hr class="mb-22 md:mb-22">
       <!-- <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="design">
         
       </h2> -->
@@ -40,7 +40,7 @@
         </div>
       </div>
       </div> -->
-      <hr class="mb-22 md:mb-28">
+      <hr class="mb-22 md:mb-22">
       <!-- <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="pack">
         
       </h2> -->

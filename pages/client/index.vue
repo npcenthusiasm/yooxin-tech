@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container grid grid-rows-1 grid-cols-1 lg:grid-cols-2 gap-x-5 mt-20 xs:mt-40 mb-32 xs:mb-48 px-7 lg:px-0">
+    <div class="container grid grid-rows-1 grid-cols-1 lg:grid-cols-2 gap-x-5 mt-20 xs:mt-25 mb-32 xs:mb-48 px-7 lg:px-0">
       <div class="clientProduct flex bg-backgroundgray mb-5 xs:mb-12 md:p-4 lg:p-0" v-for="(item, i) in product" :key="i">
         <img :src="item.img" alt="" class="productImg mt-6 ml-6 mr-9 md:m-4 lg:m-11 xs:mr-10">
         <ul class="info mt-14 mr-14 xs:m-0 sm:mt-7 lg:mt-11 xs:mr-0 sm:ml-6 lg:ml-0">

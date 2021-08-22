@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-5 mt-20 xs:mt-40 mb-17 xs:mb-25 xs:justify-between" >
+    <div class="container grid grid-rows-1 grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-5 mt-13 xs:mt-25 mb-17 xs:mb-25 xs:justify-between" >
       <div class="equipementProduct mb-8 xs:mb-21" v-for="(item, i) in product" :key="i">
         <div class="mx-auto">
           <img :src="item.img" :alt="item.name" class="mb-3 lg:mb-4">

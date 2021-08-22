@@ -1,8 +1,8 @@
 <template>
   <div class="about">
 
-    <div class="md:container pt-22 mb-30 flex flex-col md:flex-row justify-between">
-      <div class="about__carsoul about__carsoul-content  mb-5 md:mb-5 md:mr-12 lg:mr-31">
+    <div class="md:container mb-30 flex flex-col md:flex-row justify-between">
+      <div class="about__carsoul about__carsoul-content  mb-10 md:mb-5 md:mr-12 lg:mr-31">
         <div v-if="isMounted && imgs.length > 0" class="mb-5 md:mb-5">
           <client-only>
             <div ref="productSwiper" v-swiper="swiperOption"  @slideChangeTransitionStart="slideChangeTransitionStart">
