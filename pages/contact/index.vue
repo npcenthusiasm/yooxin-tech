@@ -36,32 +36,32 @@
               <label class="title" for="name">
                 公司名稱
               </label>
-              <input id="name" type="text" name="name" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
+              <input v-model="company"  id="name" type="text" name="name" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
             </div>
 
             <div class="mb-5">
               <label class="title" for="phone">
                 電話
               </label>
-              <input id="phone" type="text" name="phone" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
+              <input v-model="phone" id="phone" type="text" name="phone" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
             </div>
 
             <div class="mb-5">
               <label class="title" for="email">
                 Email
               </label>
-              <input id="email" type="email" name="email" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
+              <input v-model="email"  id="email" type="email" name="email" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
             </div>
 
             <div class="mb-13">
               <label class="title" for="content">
                 內容
               </label>
-              <textarea id="content" name="content" cols="30" rows="8" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline" />
+              <textarea v-model="content" id="content" name="content" cols="30" rows="8" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline" />
             </div>
 
             <div class="text-right">
-              <button type="submit" class="second-btn-hover w-full lg:w-49 text-white border-2 border-deepblue bg-deepblue px-4 py-3">
+              <button @click.prevent="openMail" type="submit" class="second-btn-hover w-full lg:w-49 text-white border-2 border-deepblue bg-deepblue px-4 py-3">
                 提交
               </button>
             </div>
@@ -74,7 +74,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      content: '',
+      email: '',
+      company: '',
+      phone: '',
+
+    }
+  },
+  methods: {
+    openMail () {
+      console.log(window)
+      const message = `公司名稱：${this.company}%0D%0AEmail：${this.email}%0D%0A電話：${this.phone}%0D%0A%0D%0A${this.content}`
+      window.open(`mailto:${'dennis@yooxin.com.tw'}?subject=&body=${message}`);
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
