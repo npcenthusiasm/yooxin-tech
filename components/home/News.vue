@@ -1,9 +1,7 @@
 <template>
-  <div class="container pt-18 md:pt-23 pb-15">
+  <div class="news-wrapper container pt-18 md:pt-23 pb-15">
     <div class="news">
-      <h2 class="news__title mb-10 text-center">
-        最新消息
-      </h2>
+      <h2 class="text-4xl mb-10 text-center">最新消息</h2>
 
       <ul class="news__list md:px-25">
         <li v-for="(item, index) in items" :key="index" class="new-item flex flex-col md:flex-row py-6 md:py-9 border-t">
@@ -13,7 +11,7 @@
           <h3 class="title mb-2 md:mb-0 md:mr-23 font-medium">
             {{ item.title }}
           </h3>
-          <p class="desc text-gray-400">
+          <p class="desc text-dark-350">
             {{ item.description }}
           </p>
         </li>
@@ -38,24 +36,25 @@ export default {
 
 <style lang="scss" scoped>
 
-.news {
-  &__title {
-    font-size: 30px;
-  }
+.news-wrapper {
 
-&__list {
-    li {
-      border-color: #dbdbdb;
+  .news {
+    background-color: #fcfcfc;
 
-      &:last-child {
-        border-bottom: 1px solid #dbdbdb;
+  &__list {
+      li {
+        border-color: #dbdbdb;
+  
+        &:last-child {
+          border-bottom: 1px solid #dbdbdb;
+        }
       }
     }
-  }
-
-  .news-item {
-    .title {
-      flex-basis: 160px;
+  
+    .news-item {
+      .title {
+        flex-basis: 160px;
+      }
     }
   }
 }

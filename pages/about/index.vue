@@ -3,9 +3,9 @@
 
     <div class="container pt-22 mb-11 flex flex-col md:flex-row justify-between">
       <div class="about__carsoul about__carsoul-content  mb-5 md:mb-5 md:mr-31">
-        <div v-if="imgs.length > 0" class="mb-5 md:mb-5">
+        <div v-if="isMounted && imgs.length > 0" class="mb-5 md:mb-5">
           <client-only>
-            <div ref="productSwiper" v-swiper="swiperOption" class="swiper-pb" :instanceName="1" @slideChangeTransitionStart="slideChangeTransitionStart">
+            <div ref="productSwiper" v-swiper="swiperOption" :instanceName="1" @slideChangeTransitionStart="slideChangeTransitionStart">
               <div class="swiper-wrapper">
                 <div v-for="(item, i) in imgs" :key="`1 +${i}`" class="swiper-slide">
                     <img class="about-item-img" :src="item.img" alt="">
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import SwiperOption from '@/utils/SwiperOption'
+// import SwiperOption from '@/utils/SwiperOption'
 
 export default {
   data () {
@@ -57,7 +57,13 @@ export default {
       isMounted: false,
       activeImgIndex: 0,
       swiperOption: {
-        // loop: true,
+        // init: false,
+        effect: 'slide',
+        loop: true,
+        autoplay: {
+          delay: 1000
+        },
+        slidesPerGroup: 1,
         slidesPerView: 1,
       },
       imgs: [
@@ -83,7 +89,16 @@ export default {
   },
   mounted() {
     this.isMounted = true
+    // setTimeout(() => {
+    //   this.productSwiper.init()
+    //     this.productSwiper.autoplay.start()
+    // }, 3000);
   },
+  // watch: {
+  //   productSwiper (v) {
+  //     console.log('v: ', v)
+  //   }
+  // },
   computed: {
     productSwiper() {
       if (!this.isMounted)

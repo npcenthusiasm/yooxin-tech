@@ -1,12 +1,12 @@
 <template>
   <div class="container pt-18 md:pt-23 pb-46">
     <div class="collaborate">
-      <h2 class="collaborate__title mb-12 text-center">
+      <h2 class="text-4xl mb-1 md:mb-14  text-center">
         合作客戶
       </h2>
 
-      <ul class="collaborate__list flex md:pl-25">
-        <li v-for="(item, index) in items" :key="index" class="mr-12">
+      <ul class="collaborate__list flex flex-wrap md:flex-nowrap md:pl-25">
+        <li v-for="(item, index) in items" :key="index" class="w-1/2 md:w-1/3 md:mr-12">
           <img :src="item.img" :alt="item.alt">
         </li>
       </ul>
@@ -37,10 +37,6 @@ export default {
 <style lang="scss" scoped>
 
 .collaborate{
-  &__title {
-    font-size: 30px;
-  }
-
   &__list {
     overflow-x: auto;
 

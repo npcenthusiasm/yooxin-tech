@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-lightgray pt-11 pb-19 md:pt-22 md:pb-23">
+  <div class="company-desc-wrapper pt-11 pb-19 md:pt-22 md:pb-23">
     <div class="container">
       <div>
-        <p class="company-desc mb-6 lg:mb-18 lg:px-44 text-xl">
-          以成品代工服務為核心，串連起設計生產及包材服務，透過優秀的專業團隊為客戶代勞。<br>讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，降低成本以提升產品競爭力。
+        <p class="company-desc text-lg md:text-xl mb-6 lg:mb-18 lg:px-44">
+          以成品代工服務為核心，串連起設計生產及包材服務，透過優秀的專業團隊為客戶代勞。<br class="hidden md:block">讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，降低成本以提升產品競爭力。
         </p>
       </div>
 
@@ -47,37 +47,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.company-desc {
-  line-height: 35px;
-  letter-spacing: 1px;
-}
 
-.descgroup {
+.company-desc-wrapper {
+  background-color: #f5f5f5;
 
-  &__list {
-    li {
-      // flex-basis: 100px;
-    }
+  
+  .company-desc {
+    line-height: 35px;
+    letter-spacing: 1px;
   }
-
-  &__title {
-    line-height: 24px;
-    letter-spacing: 1.1px;
-    flex-basis: 36px;
-    flex-shrink: 0;
-
-    @screen md {
-      flex-basis: initial;
+  
+  .descgroup {
+  
+    &__list {
+      li {
+        // flex-basis: 100px;
+      }
     }
-  }
-  &__desc {
-    line-height: 24px;
-    letter-spacing: 0.8px;
-    // flex-grow: 1;
-    flex-basis: 97px;
-
-    @screen md {
-      flex-basis: initial;
+  
+    &__title {
+      line-height: 24px;
+      letter-spacing: 1.1px;
+      flex-basis: 36px;
+      flex-shrink: 0;
+  
+      @screen md {
+        flex-basis: initial;
+      }
+    }
+    &__desc {
+      line-height: 24px;
+      letter-spacing: 0.8px;
+      // flex-grow: 1;
+      flex-basis: 97px;
+  
+      @screen md {
+        flex-basis: initial;
+      }
     }
   }
 }
