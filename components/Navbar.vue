@@ -123,6 +123,7 @@ export default {
       justify-content: center;
       align-items: center;
       padding-top: 20px;
+      visibility: hidden;
 
       opacity: 0;
       transform: translateY(-20px);
@@ -134,13 +135,11 @@ export default {
       }
 
       &.open {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0);
       }
-
-
     }
-
   }
 }
 
