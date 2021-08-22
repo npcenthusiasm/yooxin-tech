@@ -169,22 +169,22 @@ export default {
       // justify-content: center;
       justify-content: flex-start;
       align-items: center;
-      padding-top: 20px;
+      padding-top: 40px;
       visibility: hidden;
 
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: all .5s ease-in-out;
+      // opacity: 0;
+      // transform: translateY(-20px);
+      // transition: all .5s ease-in-out;
 
       .menu-item {
-        padding: 20px 10px;
+        padding: 28px 10px;
 
       }
 
       &.open {
         visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
+        // opacity: 1;
+        // transform: translateY(0);
       }
     }
   }
