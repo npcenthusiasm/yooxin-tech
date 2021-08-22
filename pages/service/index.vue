@@ -7,7 +7,10 @@
       <!-- <h2 class="text-4xl mb-13 xs:mb-10 md:pl-4 lg:pl-0" id="foundry">
         成品代工
       </h2> -->
-      <ProductsGridTitle title="成品代工" id="foundry" />
+      <div class="relative">
+        <div id="foundry" class="absolute -top-24"></div>
+        <ProductsGridTitle title="成品代工"/>
+      </div>
       <ProductsGrid :items="foundry" class=""/>
       <!-- <div class="grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-20 xs:gap-20 mb-5 xs:mb-9 md:px-4 lg:px-0">
         <div v-for="(item, i) in foundry" :key="i" class="">
@@ -24,7 +27,10 @@
       <!-- <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="design">
         
       </h2> -->
-      <ProductsGridTitle title="設計&生產" id="design" /> 
+      <div class="relative">
+        <div id="design" class="absolute -top-24"></div>
+        <ProductsGridTitle title="設計&生產" /> 
+      </div>
 
       <ProductsGrid :items="design " />
       <!-- <div class="design grid grid-rows-1 grid-cols-2 xs:grid-cols-3 lg:grid-cols-5 gap-x-5 xs:gap-x-20 mb-5 xs:mb-26 md:px-4 lg:px-0">
@@ -44,7 +50,10 @@
       <!-- <h2 class="text-3xl mb-13 xs:mb-10 mt-23 xs:mt-33 font-medium md:pl-4 lg:pl-0" id="pack">
         
       </h2> -->
-      <ProductsGridTitle title="包裝" id="pack" />
+      <div class="relative">
+        <div id="pack" class="absolute -top-24"></div>
+        <ProductsGridTitle title="包裝" />
+      </div>
 
       <ProductsGrid :items="pack"/>
 
