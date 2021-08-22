@@ -10,7 +10,7 @@
         <div class="content mt-6 xlg:mt-0 sm:mr-16">
           <h4 class="text-base xs:text-sm text-left text-titlegray px-6 lg:px-0" >{{ item.item.term }} : {{ item.item.termName }} </h4>
           <div class="btn m-6 mb-8 xs:m-0 xs:mt-11 flex flex-col xlg:items-end md:ml-7 lg:ml-0">
-          <a :href="item.link" target="_blank" class="w-full sm:w-11/12  lg:mb-4 xlg:mb-0 xlg:w-5/12 py-3 md:py-2 px-8 md:px-0 border-2 border-deepblue font-medium text-deepblue text-base xs:text-sm text-center ">看看產品</a>
+          <a :href="item.link" target="_blank" class="main-btn-hover w-full sm:w-11/12  lg:mb-4 xlg:mb-0 xlg:w-5/12 py-3 md:py-2 px-8 md:px-0 border-2 border-deepblue font-medium text-deepblue text-base xs:text-sm text-center ">看看產品</a>
           </div>
         </div>
       </div>

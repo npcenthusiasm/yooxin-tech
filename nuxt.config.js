@@ -7,6 +7,10 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
     }
   : {}
 
+function getPathLink (path) {
+  return process.env.DEPLOY_ENV === 'GH_PAGES' ? '/yooxin-tech/' + path : path
+}
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -36,7 +40,8 @@ export default {
       // { hid: 'og:type', property: 'og:type', content: 'website' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: getPathLink('/favicon.png') }
+
     ],
     script: [
       {

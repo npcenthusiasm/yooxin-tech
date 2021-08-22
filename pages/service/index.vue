@@ -64,6 +64,8 @@
 </template>
 
 <script>
+import scrollIntoView from 'smooth-scroll-into-view-if-needed'
+
 import ProductsGridTitle from '@/components/ProductsGridTitle.vue'
 import ProductsGrid from '@/components/ProductsGrid.vue'
 
@@ -169,11 +171,17 @@ export default {
     //   setTimeout(function () { el.scrollIntoView() }, 1000)
     // }
 
-    const anchor = this.$route.query.search
+    const anchor = this.$route.query.anchor
     if (anchor) {
-      const el = document.querySelector(`#${anchor}'`)
-      console.log('el: ', el)
-      setTimeout(function () { el.scrollIntoView() }, 1000)
+      const el = document.querySelector(`#${anchor}`)
+        console.log('el: ', el)
+      if (el) {
+        scrollIntoView(el, {
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+      // setTimeout(function () { el.scrollIntoView() }, 1000)
     }
   }
 }

@@ -61,7 +61,7 @@
             </div>
 
             <div class="text-right">
-              <button type="submit" class="w-full md:w-49 text-white bg-deepblue px-20 py-3">
+              <button type="submit" class="second-btn-hover w-full md:w-49 text-white border-2 border-deepblue bg-deepblue px-4 py-3">
                 提交
               </button>
             </div>
