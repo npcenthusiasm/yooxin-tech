@@ -192,6 +192,10 @@ export default {
       padding: 12px 32px;
       font-weight: 500;
 
+      &:hover {
+        color: #fcfcfc;
+      }
+
       @include ipad {
         margin-top: auto;
         margin-left: auto;

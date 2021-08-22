@@ -36,7 +36,7 @@
       <div class="relative w-full">
         <div class="container flex justify-between items-center">
           <h1 class="">
-            <nuxt-link to="/" >
+            <nuxt-link to="/" @click.native="open = false">
               <!-- 侑欣科技設計整合有限公司 -->
               <img class="mobile-navbar-logo" src="~assets/img/logo/logo_web.svg" alt=""  srcset="">
             </nuxt-link>

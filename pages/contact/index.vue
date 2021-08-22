@@ -36,28 +36,28 @@
               <label class="title" for="name">
                 公司名稱
               </label>
-              <input id="name" type="text" name="phone">
+              <input id="name" type="text" name="name" class="ppearance-none">
             </div>
 
             <div class="mb-5">
               <label class="title" for="phone">
                 電話
               </label>
-              <input id="phone" type="text" name="phone">
+              <input id="phone" type="text" name="phone" class="ppearance-none">
             </div>
 
             <div class="mb-5">
               <label class="title" for="email">
                 Email
               </label>
-              <input id="email" type="email" name="email">
+              <input id="email" type="email" name="email" class="ppearance-none">
             </div>
 
             <div class="mb-13">
               <label class="title" for="content">
                 內容
               </label>
-              <textarea id="content" name="content" cols="30" rows="8" />
+              <textarea id="content" name="content" cols="30" rows="8" class="ppearance-none" />
             </div>
 
             <div class="text-right">
