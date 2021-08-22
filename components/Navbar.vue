@@ -145,14 +145,18 @@ export default {
 
     .mobile-nav-menu {
       position: absolute;
-      top: 45px;
-      // bottom: 0;
+      top: 55px;
+      // top:80px;
+      bottom: 0;
       left: 0;
       right: 0;
+      height: 100vh;
+      // background-color: black;
       background-color: #fcfcfc;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       padding-top: 20px;
       visibility: hidden;
