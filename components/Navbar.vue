@@ -7,11 +7,20 @@
           <!-- logo_web.svg
           <nuxt-link to="/" class="logo mr-3" />
           <h1>侑欣科技設計整合有限公司<br><span class="inline-block mt-1 text-sm">Yooxin Technology Co.,Ltd.</span></h1> -->
-          <h1 class="h1-logo">
+          <!-- <h1 class="h1-logo">
             <nuxt-link to="/" class="navbar-logo">
               侑欣科技設計整合有限公司
             </nuxt-link>
-          </h1>
+          </h1> -->
+        <!-- <nuxt-link to="/" class="navbar-logo2">
+          侑欣科技設計整合有限公司
+        </nuxt-link> -->
+        <nuxt-link to="/" class="navbar-logo3">
+          <!-- 侑欣科技設計整合有限公司 -->
+          <img src="~assets/img/logo/logo_web.svg" alt=""  srcset="">
+        </nuxt-link>
+
+
         </div>
         <ul class="flex">
           <li v-for="(link, index) in links" :key="index" class="font-medium md:text-sm lg:text-base md:mr-1 lg:mr-6 xl:mr-16 last:mr-0">
@@ -92,6 +101,18 @@ export default {
     height: 45px;
   }
 
+  .navbar-logo2 {
+    background-image: url('~assets/img/logo/logo_web.svg');
+    height: 50px;
+  }
+
+  .navbar-logo3 {
+    img {
+      width: 100%;
+      height: 50px;
+    }
+  }
+
   .mobile-navbar-logo {
 
     background-image: url('~assets/img/logo/logo_mobile.svg');
@@ -125,6 +146,7 @@ export default {
     .mobile-nav-menu {
       position: absolute;
       top: 45px;
+      // bottom: 0;
       left: 0;
       right: 0;
       background-color: #fcfcfc;

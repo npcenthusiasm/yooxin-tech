@@ -1,8 +1,8 @@
 <template>
-  <div class="contact-page pt-20 md:pt-29 pb-43">
+  <div class="contact-page pt-16 md:pt-29 pb-43">
     <div class="container">
       <div class="flex flex-col md:flex-row justify-between">
-        <div class="compnay-info mb-10 md:mb-0 md:w-1/2 md:mr-15 lg:mr-10" style="max-width: 416px">
+        <div class="compnay-info mb-23 md:mb-0 md:w-1/2 md:mr-15 lg:mr-10" style="max-width: 416px">
           <h2 class="area-title mb-12 md:mb-8">公司資訊</h2>
           <ul class="contact-list">
             <li class="flex mb-6">
@@ -36,14 +36,14 @@
               <label class="title" for="name">
                 公司名稱
               </label>
-              <input id="name" type="number" name="phone">
+              <input id="name" type="text" name="phone">
             </div>
 
             <div class="mb-5">
               <label class="title" for="phone">
                 電話
               </label>
-              <input id="phone" type="number" name="phone">
+              <input id="phone" type="text" name="phone">
             </div>
 
             <div class="mb-5">
@@ -81,6 +81,9 @@ export default {}
 
 
 .contact-page {
+  #content {
+    padding: 10px;
+  }
 
   .area-title {
     @apply text-4xl md:text-2xl pb-6 border-b border-lightgraybr;
@@ -103,6 +106,8 @@ export default {}
   
     input, textarea {
       @apply w-full border rounded-sm bg-shonwhite border-lightgraybr pl-2;
+      outline: none;
+
       &:focus {
         outline: none;
       }

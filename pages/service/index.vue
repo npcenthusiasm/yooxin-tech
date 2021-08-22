@@ -3,7 +3,7 @@
     <!-- <div class="banner mb-25 xs:mb-32 ">
         <img src="http://fakeimg.pl/1440x286/282828/EAE0D0/" class="mx-auto" alt="">
       </div> -->
-    <div class="container mt-30 xs:mt-33 mb-12 xs:mb-24">
+    <div class="container mt-20 xs:mt-33 mb-12 xs:mb-24">
       <!-- <h2 class="text-4xl mb-13 xs:mb-10 md:pl-4 lg:pl-0" id="foundry">
         成品代工
       </h2> -->
@@ -83,37 +83,37 @@ export default {
         {
           img: require('../../assets/img/serviceImg/compose 02.jpeg'),
           name: '塑膠熱熔',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: ''
         },
         {
           img: require('../../assets/img/serviceImg/compose 03.jpeg'),
           name: '螺絲所附',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: '用適當的扭力鎖緊產品'
         },
         {
-          img: 'http://fakeimg.pl/192x192/282828/EAE0D0/',
+          img: '',
           name: '打端子',
           content: '簡易模具沖壓床加工、組裝、檢驗'
         },
         {
           img: require('../../assets/img/serviceImg/compose 05.jpeg'),
           name: '產品電測',
-          content: '改成可以寫成可以測試電壓範圍之類的'
+          content: '檢測產品電壓'
         },
         {
           img: require('../../assets/img/serviceImg/compose 06.jpeg'),
           name: '3C 產品組裝',
-          content: '各類 3C 產品組裝包裝加工'
-        },
-        {
-          img: require('../../assets/img/serviceImg/compose 07.jpeg'),
-          name: '彩盒包裝',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: '各類 3C 產品組裝加工'
         },
         {
           img: require('../../assets/img/serviceImg/compose 08.jpeg'),
           name: '各類手加工',
           content: '品質檢驗後，把檢測有問題的零件拆解及修復'
+        },
+        {
+          img: require('../../assets/img/serviceImg/compose 07.jpeg'),
+          name: '彩盒包裝',
+          content: '將產品放進折好的包裝盒'
         },
         {
           img: require('../../assets/img/serviceImg/compose 09.jpeg'),
@@ -125,47 +125,54 @@ export default {
         {
           img: require('../../assets/img/serviceImg/design 01.jpeg'),
           name: 'ID 設計',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: '收集並整理產品相關資訊，提出合適的構想'
         },
         {
           img: require('../../assets/img/serviceImg/design 02.jpeg'),
           name: 'MD 設計',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: '除了維持外觀完整性，也要有好的生產考量'
         },
         {
-          img: 'http://fakeimg.pl/192x192/282828/EAE0D0/',
+          img: require('../../assets/img/serviceImg/design 03.jpeg'),
           name: '模具開發',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: '讓產品的生產過程合理有效率'
         },
         {
-          img: 'http://fakeimg.pl/192x192/282828/EAE0D0/',
+          img: require('../../assets/img/serviceImg/design 04.jpeg'),
           name: '塑膠射出',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: '透過品質檢測，把關觸感、顏色、良率'
         }
       ],
       pack: [
         {
-          img: 'http://fakeimg.pl/192x192/282828/EAE0D0/',
+          img: require('../../assets/img/serviceImg/package 01.jpeg'),
           name: '彩盒',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: ''
         },
         {
           img: require('../../assets/img/serviceImg/package 02.jpeg'),
           name: '牛皮紙盒',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: ''
         },
         {
           img: require('../../assets/img/serviceImg/package 04.jpeg'),
           name: '紙塑',
-          content: '敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述'
+          content: ''
         }
       ]
     }
   },
   mounted () {
-    const anchor = this.$route.hash
+    // const anchor = this.$route.hash
+    // if (anchor) {
+    //   const el = document.querySelector(anchor)
+    //   setTimeout(function () { el.scrollIntoView() }, 1000)
+    // }
+
+    const anchor = this.$route.query.search
     if (anchor) {
-      const el = document.querySelector(anchor)
+      const el = document.querySelector(`#${anchor}'`)
+      console.log('el: ', el)
       setTimeout(function () { el.scrollIntoView() }, 1000)
     }
   }

@@ -2,7 +2,7 @@
   <div class="company-desc-wrapper pt-11 pb-19 md:pt-22 md:pb-23">
     <div class="container">
       <div>
-        <p class="company-desc text-lg md:text-xl mb-6 lg:mb-18 lg:px-44">
+        <p class="company-desc text-lg md:text-xl mb-6 lg:mb-18 lg:px-44 text-center">
           以成品代工服務為核心，串連起設計生產及包材服務，透過優秀的專業團隊為客戶代勞。<br class="hidden md:block">讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，降低成本以提升產品競爭力。
         </p>
       </div>
@@ -21,7 +21,8 @@
       </ul> -->
 
       <ul class="descgroup grid grid-rows-1 grid-cols-1 lg:grid-cols-3 gap-5">
-        <li v-for="item in descriptionGroup" :key="item.title" class="flex justify-between items-center px-5 pt-4 pb-4 lg:pt-0 lg:pb-0 lg:px-0 border-2 lg:border border-deepblue bg-shonwhite font-medium">
+        <li v-for="item in descriptionGroup" :key="item.title" class="company-item flex justify-between items-center px-5 pt-4 pb-4 lg:pt-0 lg:pb-0 lg:px-0 border-2  border-deepblue bg-shonwhite font-medium"
+          @click="goPage(item.target)">
           <div class="descgroup__title  lg:pl-15 lg:p-6 w-1/4 lg:w-1/2 lg:flex-basis text-deepblue lg:text-1xl text-center lg:text-left">
             {{ item.title }}
           </div>
@@ -43,17 +44,26 @@ export default {
       descriptionGroup: [
         {
           title: '成品代工',
+          target: 'foundry',
           items: [{ title: '3C 電子組裝' }, { title: 'PCB 焊接' }, { title: '熱縮包裝' }, { title: '各類手加工' }]
         },
         {
           title: '設計生產',
+          target: 'design',
+
           items: [{ title: 'ID 設計' }, { title: 'MD 設計' }, { title: '模具開發' }, { title: '塑膠射出' }]
         },
         {
           title: '包材',
-          items: [{ title: '彩盒' }, { title: '牛皮紙盒' }, { title: '軋盒' }, { title: '紙塑' }]
+          target: 'pack',
+          items: [{ title: '彩盒' }, { title: '牛皮紙盒' }, { title: '紙塑' }]
         }
       ]
+    }
+  },
+  methods: {
+    goPage (target) {
+      this.$router.push({ name: 'service', query: { search: target } })
     }
   }
 }
@@ -64,6 +74,25 @@ export default {
 .company-desc-wrapper {
   background-color: #f5f5f5;
 
+
+  .company-item {
+      transition: .2s all ease-in-out;
+    
+    .descgroup__title,
+    .descgroup__desc {
+      transition: .2s all ease-in-out;
+      
+    }
+    &:hover {
+      // background-color: #efefef;
+      background-color: #21219c;
+      color: #fcfcfc;
+
+      .descgroup__title {
+        color: #fcfcfc;
+      }
+    }
+  }
   
   .company-desc {
     line-height: 35px;
@@ -72,11 +101,6 @@ export default {
   
   .descgroup {
   
-    &__list {
-      li {
-        // flex-basis: 100px;
-      }
-    }
   
     &__title {
       line-height: 24px;
@@ -89,6 +113,7 @@ export default {
       }
     }
     &__desc {
+      // transition: .2s all ease-in-out;
       line-height: 24px;
       letter-spacing: 0.8px;
       // flex-grow: 1;

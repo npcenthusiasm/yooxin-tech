@@ -1,7 +1,7 @@
 <template>
   <div class="about">
 
-    <div class="container pt-22 mb-11 flex flex-col md:flex-row justify-between">
+    <div class="container pt-22 mb-30 flex flex-col md:flex-row justify-between">
       <div class="about__carsoul about__carsoul-content  mb-5 md:mb-5 md:mr-31">
         <div v-if="isMounted && imgs.length > 0" class="mb-5 md:mb-5">
           <client-only>
