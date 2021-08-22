@@ -1,9 +1,11 @@
 <template>
   <div class="about">
 
-    <div class="md:container mb-30 flex flex-col md:flex-row justify-between">
-      <div class="about__carsoul about__carsoul-content  mb-10 md:mb-5 md:mr-12 lg:mr-31">
-        <div v-if="isMounted && imgs.length > 0" class="mb-5 md:mb-5">
+    <div class="md:container mb-30 flex flex-col lg:flex-row justify-between pt-0 lg:pt-12">
+
+<!-- lg:mr-12 lg:mr-31 -->
+      <div class="about__carsoul mb-10 lg:mb-5  lg:w-5/12">
+        <div v-if="isMounted && imgs.length > 0" class="mb-5 lg:mb-5">
           <client-only>
             <div ref="productSwiper" v-swiper="swiperOption"  @slideChangeTransitionStart="slideChangeTransitionStart">
               <div class="swiper-wrapper">
@@ -21,8 +23,8 @@
       </div>
 
 
-      <div class="container md:px-0 about-desc">
-        <div class="mb-12 md:mb-8 md:pr-10">
+      <div class="container md:px-0 about-desc-area lg:w-7/12">
+        <div class="mb-12 lg:mb-8 lg:pr-10">
           <p class="mb-6">
             侑欣設立於 2012 年，以 IC 代測加工廠起家，之後進入記憶體產業從事 FLASH IC、積體電路、晶片買賣等，在資訊電子業產銷分工結構模式中，扮演著橋樑角色。
           </p>
@@ -32,10 +34,10 @@
           <p>另外在 ID 設計、MD 設計、模具開發、塑膠射出上也都有專業團隊合作。</p>
         </div>
 
-        <div style="height: 1px" class="mb-13 md:mb-11 w-full bg-lightgraybr" />
+        <div style="height: 1px" class="mb-13 lg:mb-11 w-full bg-lightgraybr" />
 
-        <ul class="about-list text-base md:text-sm md:pr-10">
-          <li v-for="(item, index) in items" :key="index" class="flex mb-2 md:mb-1 last:mb-0">
+        <ul class="about-list text-base lg:text-sm lg:pr-10">
+          <li v-for="(item, index) in items" :key="index" class="flex mb-2 lg:mb-1 last:mb-0">
             <div class="title mr-9">
               {{ item.title }}
             </div>
@@ -134,10 +136,16 @@ export default {
 .about {
 
   .about__carsoul {
-    max-width: 520px;
+      max-width: 100%;
+
+    @include laptop {
+      max-width: 520px;
+      margin-right: calc(100% * 1/12);
+    }
   }
   .about-item-img {
-    width: 520px;
+    // width: 520px;
+    width: 100%;
   }
 
   .pagination-item {
@@ -155,21 +163,7 @@ export default {
     }
   }
 
-  // &__carsoul-content {
-  //   width: 100%;
-  //   // max-width: 528px;
-
-  //   @screens sm {
-  //     // width: 528px;
-  //     // height: 528px;
-  //     aspect-ratio: 528 / 490;
-  //   }
-  //   width: 528px;
-  //   height: 528px;
-  //   flex-shrink: 0;
-  // }
-
-  .about-desc {
+  .about-desc-area {
     letter-spacing: 0.8px;
     line-height: 28px;
   }
@@ -182,6 +176,10 @@ export default {
       flex-shrink: 0;
 
       @include ipad {
+        flex-basis: 70px;
+      }
+
+      @include laptop {
         flex-basis: 60px;
       }
     }

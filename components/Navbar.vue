@@ -32,14 +32,14 @@
       </div>
     </div>
 
-    <div class="mobile-nav flex md:hidden">
+    <div class="mobile-nav flex lg:hidden">
       <div class="relative w-full">
         <div class="container flex justify-between items-center">
           <h1 class="">
-            <!-- <nuxt-link to="/" class="mobile-navbar-logo"> -->
+            <nuxt-link to="/" >
               <!-- 侑欣科技設計整合有限公司 -->
-            <!-- </nuxt-link> -->
-            <img class="mobile-navbar-logo" src="~assets/img/logo/logo_web.svg" alt=""  srcset="">
+              <img class="mobile-navbar-logo" src="~assets/img/logo/logo_web.svg" alt=""  srcset="">
+            </nuxt-link>
             
           </h1>
           <div class="block lg:hidden">
@@ -56,8 +56,8 @@
         </ul>
       </div>
     </div>
-    <div style="height:76px" class="w-full md:hidden"></div>
-    <div style="height:76px" class="hidden w-full md:block"></div>
+    <div style="height:76px" class="w-full lg:hidden"></div>
+    <div style="height:76px" class="hidden w-full lg:block"></div>
   </div>
 </template>
 

@@ -15,6 +15,24 @@
         </div>
       </div>
     </div>
+
+    <!-- <div class="pl-6 pr-6 pt-6 pb-8 bg-backgroundgray" v-for="(item, i) in product" :key="i">
+      <div>
+        <div class="flex justify-between">
+          <img :src="item.img" alt="" class="productImg mt-6 ml-6 mr-9 md:m-4 lg:m-11 xs:mr-10">
+          <div>
+            <div class="mb-1 sm:mb-2">{{ item.brand }}</div>
+            <div class="text-base xs:text-1xl">{{ item.name }}</div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-base xs:text-sm text-left text-titlegray px-6 lg:px-0" >{{ item.item.term }} : {{ item.item.termName }} </h4>
+        </div>
+        <a :href="item.link" target="_blank" class="main-btn-hover w-full sm:w-11/12  lg:mb-4 xlg:mb-0 xlg:w-5/12 py-3 md:py-2 px-8 md:px-0 border-2 border-deepblue font-medium text-deepblue text-base xs:text-sm text-center ">看看產品</a>
+      </div>
+
+    </div> -->
   </div>
 </template>
 

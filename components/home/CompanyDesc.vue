@@ -127,7 +127,14 @@ export default {
   
       @include ipad {
         flex-basis: initial;
+        margin-right: 0;
       }
+
+      @include laptop {
+        margin-right: 20px;
+      }
+
+
     }
     .descgroup-desc {
       // transition: .2s all ease-in-out;
@@ -136,10 +143,20 @@ export default {
       // flex-grow: 1;
       flex-basis: 97px;
   
+
+
+    }
+  }
+
+  .descgroup-list {
+
       @include ipad {
         flex-basis: initial;
+        padding-left: 20px;
+        padding-right: 20px;
       }
-    }
+
+
   }
 }
 
