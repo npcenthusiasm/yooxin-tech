@@ -6,14 +6,14 @@
       </h2>
 
       <ul class="news__list md:px-25">
-        <li v-for="(item, index) in items" :key="index" class="flex flex-col md:flex-row py-6 md:py-9 border-t">
-          <div class="mb-2 md:mb-0 md:mr-18 font-blod">
+        <li v-for="(item, index) in items" :key="index" class="new-item flex flex-col md:flex-row py-6 md:py-9 border-t">
+          <div class="date mb-2 md:mb-0 md:mr-18 font-blod">
             {{ item.date }}
           </div>
-          <h3 class="mb-2 md:mb-0 md:mr-23 font-medium">
+          <h3 class="title mb-2 md:mb-0 md:mr-23 font-medium">
             {{ item.title }}
           </h3>
-          <p class="text-gray-400">
+          <p class="desc text-gray-400">
             {{ item.description }}
           </p>
         </li>
@@ -43,13 +43,19 @@ export default {
     font-size: 30px;
   }
 
-  &__list {
+&__list {
     li {
       border-color: #dbdbdb;
 
       &:last-child {
         border-bottom: 1px solid #dbdbdb;
       }
+    }
+  }
+
+  .news-item {
+    .title {
+      flex-basis: 160px;
     }
   }
 }

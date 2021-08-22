@@ -1,11 +1,27 @@
 <template>
   <div class="about">
+
     <div class="container pt-22 mb-11 flex flex-col md:flex-row justify-between">
-      <div class="about__carsoul about__carsoul-content bg-lightgray mb-5 md:mb-0 md:mr-31">
-        <div class="" />
+      <div class="about__carsoul about__carsoul-content  mb-5 md:mb-5 md:mr-31">
+        <div v-if="imgs.length > 0" class="mb-5 md:mb-5">
+          <client-only>
+            <div ref="productSwiper" v-swiper="swiperOption" class="swiper-pb" :instanceName="1" @slideChangeTransitionStart="slideChangeTransitionStart">
+              <div class="swiper-wrapper">
+                <div v-for="(item, i) in imgs" :key="`1 +${i}`" class="swiper-slide">
+                    <img class="about-item-img" :src="item.img" alt="">
+                </div>
+              </div>
+            </div>
+          </client-only>
+        </div>
+
+        <div class="flex">
+          <div class="pagination-item" v-for="(item, index) in imgs" :key="index" :class="{'active': activeImgIndex === index}"></div>
+        </div>
       </div>
 
-      <div class="about__desc">
+
+      <div class="about-desc">
         <div class="mb-8 md:pr-10">
           <p class="mb-6">
             侑欣設立於 2012 年，以 IC 代測加工廠起家，之後進入記憶體產業從事 FLASH IC、積體電路、晶片買賣等，在資訊電子業產銷分工結構模式中，扮演著橋樑角色。
@@ -18,9 +34,9 @@
 
         <div style="height: 1px" class="mb-11 w-full bg-lightgraybr" />
 
-        <ul class="about__list text-sm md:pr-10">
+        <ul class="about-list text-sm md:pr-10">
           <li v-for="(item, index) in items" :key="index" class="flex mb-1 last:mb-0">
-            <div class="about__list-title mr-9">
+            <div class="title mr-9">
               {{ item.title }}
             </div>
             <!-- eslint-disable vue/no-v-html  -->
@@ -33,9 +49,28 @@
 </template>
 
 <script>
+import SwiperOption from '@/utils/SwiperOption'
+
 export default {
   data () {
     return {
+      isMounted: false,
+      activeImgIndex: 0,
+      swiperOption: {
+        // loop: true,
+        slidesPerView: 1,
+      },
+      imgs: [
+        {
+          img: require('~/assets/img/aboutImg/about_01.jpeg')
+        },
+        {
+          img: require('~/assets/img/aboutImg/about_02.jpeg')
+        },
+        {
+          img: require('~/assets/img/aboutImg/about_03.jpeg')
+        }
+      ],
       items: [
         { title: '公司建立', desc: '2012 年 9 月' },
         { title: '資本額', desc: 'NTD 7,000,000' },
@@ -45,6 +80,26 @@ export default {
         { title: '主要技術', desc: '電子組裝代工、 PCBA焊接 、 3C產品電測 、各類手加工' }
       ]
     }
+  },
+  mounted() {
+    this.isMounted = true
+  },
+  computed: {
+    productSwiper() {
+      if (!this.isMounted)
+        return
+
+      return this.$refs.productSwiper.swiper
+    },
+  },
+  methods: {
+    slideChangeTransitionStart (e) {
+      console.log('e: ', e)
+      console.log(123)
+      const activeIndex = this.productSwiper.realIndex
+      this.activeImgIndex = activeIndex
+      console.log('activeIndex: ', activeIndex)
+    }
   }
 }
 </script>
@@ -52,28 +107,50 @@ export default {
 <style lang="scss" scoped>
 
 .about {
-  &__carsoul-content {
-    width: 100%;
-    // max-width: 528px;
 
-    @screens sm {
-      // width: 528px;
-      // height: 528px;
-      aspect-ratio: 528 / 490;
+  .about__carsoul {
+    max-width: 520px;
+  }
+  .about-item-img {
+    width: 520px;
+  }
+
+  .pagination-item {
+    width: 100px;
+    height: 8px;
+    border: solid 1px #dcdcdc;   
+    margin-right: 12px;
+
+    &.active {
+      border: solid 2px #21219c;
     }
-    width: 528px;
-    height: 528px;
-    flex-shrink: 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
-  &__desc {
+  // &__carsoul-content {
+  //   width: 100%;
+  //   // max-width: 528px;
+
+  //   @screens sm {
+  //     // width: 528px;
+  //     // height: 528px;
+  //     aspect-ratio: 528 / 490;
+  //   }
+  //   width: 528px;
+  //   height: 528px;
+  //   flex-shrink: 0;
+  // }
+
+  .about-desc {
     line-height: 28px;
   }
 
-  &__list {
+  .about-list {
     line-height: 28px;
 
-    &-title {
+    .title {
       flex-basis: 60px;
       flex-shrink: 0;
     }

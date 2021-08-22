@@ -2,8 +2,8 @@
   <div class="bg-lightgray pt-11 pb-19 md:pt-22 md:pb-23">
     <div class="container">
       <div>
-        <p class="company__desc mb-6 lg:mb-18 lg:px-44 text-xl">
-          以成品代工服務為核心，串連起設計生產及包材服務，透過優秀的專業團隊為客戶代勞。讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，降低成本以提升產品競爭力。
+        <p class="company-desc mb-6 lg:mb-18 lg:px-44 text-xl">
+          以成品代工服務為核心，串連起設計生產及包材服務，透過優秀的專業團隊為客戶代勞。<br>讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，降低成本以提升產品競爭力。
         </p>
       </div>
 
@@ -47,9 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.company__desc {
-  line-height: 30px;
-  letter-spacing: 0.9px;
+.company-desc {
+  line-height: 35px;
+  letter-spacing: 1px;
 }
 
 .descgroup {

@@ -1,8 +1,14 @@
 <template>
   <div class="navbar container flex justify-between items-center">
     <div class="flex">
+      <!-- logo_web.svg
       <nuxt-link to="/" class="logo mr-3" />
-      <h1>侑欣科技設計整合有限公司<br><span class="inline-block mt-1 text-sm">Yooxin Technology Co.,Ltd.</span></h1>
+      <h1>侑欣科技設計整合有限公司<br><span class="inline-block mt-1 text-sm">Yooxin Technology Co.,Ltd.</span></h1> -->
+      <h1 class="h1-logo">
+        <nuxt-link to="/" class="navbar-logo">
+          侑欣科技設計整合有限公司
+        </nuxt-link>
+      </h1>
     </div>
     <ul class="hidden lg:flex">
       <li v-for="(link, index) in links" :key="index" class="font-medium lg:mr-6 xl:mr-16 last:mr-0">
@@ -49,16 +55,29 @@ export default {
 }
 
 </script>
-<style lang="css">
+<style lang="scss" scoped>
 
 .navbar {
-  height: 104px;
+  height: 105px;
+
+  .navbar-logo {
+    background-image: url('~assets/img/logo/logo_web.svg');
+    text-indent: 101%;
+    overflow:hidden;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    float:left;
+    height: 45px;
+    // width: 40px;
+    // width: 104px;
+  }
+
 }
 
-.logo {
+/* .logo {
   width: 48px;
   height: 48px;
   background-color: #21219c;
-}
+} */
 
 </style>

@@ -6,7 +6,7 @@
       </h2>
 
       <ul class="collaborate__list flex md:pl-25">
-        <li v-for="(item, index) in items" :key="index" class="mr-12 bg-lightgray">
+        <li v-for="(item, index) in items" :key="index" class="mr-12">
           <img :src="item.img" :alt="item.alt">
         </li>
       </ul>
@@ -18,15 +18,16 @@
 export default {
   data () {
     return {
-      items: [{
-        img: require('~/assets/img/HomeImg/client 01.svg')
-      },
-      {
-        img: require('~/assets/img/HomeImg/client 02.svg')
-      },
-      {
-        img: require('~/assets/img/HomeImg/client 03.svg')
-      }
+      items: [
+        {
+          img: require('~/assets/img/HomeImg/client 01.svg')
+        },
+        {
+          img: require('~/assets/img/HomeImg/client 02.svg')
+        },
+        {
+          img: require('~/assets/img/HomeImg/client 03.svg')
+        }
       ]
     }
   }
