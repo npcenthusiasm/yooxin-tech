@@ -92,6 +92,8 @@ module.exports = {
         customgray: '#DCDCDC',
         lightgraybr: '#dbdbdb',
         lightgray: '#f4f4f4',
+        backgroundgray: '#f5f5f5',
+        titlegray: '#27272d',
         deepblue: '#21219c',
         black: {
           DEFAULT: 'rgba(0, 0, 0, 1)',
