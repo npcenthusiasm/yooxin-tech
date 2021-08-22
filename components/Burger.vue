@@ -52,24 +52,25 @@ export default {
 
   .burger-btn {
     position: relative;
-    height: 22px;
+    height: 25px;
     width: 22px;
 
     span {
-      transition: transform .2s ease-in-out;
+      transition: transform .2s linear;
       height: 2px;
       width: 22px;
       display: block;
       position: absolute;
       background-color: #27272d;
-      transform: rotate(0) translateY(0);
-
+      // transform: rotate(0) translateY(0);
+      
       &:first-of-type {
-        top: 6px;
+        top: 8px;
+        transform: translateY(0px);
       }
 
       &:last-of-type {
-        bottom: 6px;
+        bottom: 8px;
       }
       
     }
@@ -77,16 +78,17 @@ export default {
     &.open {
       span {
         &:first-of-type {
+            // top: 8px;
           // top: 11px;
-          top: 50%;
-          transform: rotate(45deg) translateY(-50%);
+          // top: 50%;
+          transform: translateY(7px);
         }
       }
       span {
         &:last-of-type {
           // bottom: 11px;
-          bottom: 50%;
-          transform: rotate(-45deg)  translateY(50%);;
+          // bottom: 50%;
+          // transform: rotate(-45deg)  translateY(50%);;
         }
       }
     }
