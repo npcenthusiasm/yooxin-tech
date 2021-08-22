@@ -5,9 +5,9 @@
       <div class="about__carsoul about__carsoul-content  mb-5 md:mb-5 md:mr-12 lg:mr-31">
         <div v-if="isMounted && imgs.length > 0" class="mb-5 md:mb-5">
           <client-only>
-            <div ref="productSwiper" v-swiper="swiperOption" :instanceName="1" @slideChangeTransitionStart="slideChangeTransitionStart">
+            <div ref="productSwiper" v-swiper="swiperOption"  @slideChangeTransitionStart="slideChangeTransitionStart">
               <div class="swiper-wrapper">
-                <div v-for="(item, i) in imgs" :key="`1 +${i}`" class="swiper-slide">
+                <div v-for="(item, i) in imgs" :key="`1 +${i}`" class="swiper-slide" >
                     <img class="about-item-img" :src="item.img" alt="">
                 </div>
               </div>
@@ -16,7 +16,7 @@
         </div>
 
         <div class="flex px-7 md:px-0">
-          <div class="pagination-item" v-for="(item, index) in imgs" :key="index" :class="{'active': activeImgIndex === index}"></div>
+          <div class="pagination-item" v-for="(item, index) in imgs" :key="index" :class="{'active': activeImgIndex === index}" @click="slideToImg(index)"></div>
         </div>
       </div>
 
@@ -59,9 +59,9 @@ export default {
       swiperOption: {
         // init: false,
         effect: 'slide',
-        loop: true,
+        loop: false,
         autoplay: {
-          delay: 1000
+          delay: 4000
         },
         slidesPerGroup: 1,
         slidesPerView: 1,
@@ -114,6 +114,13 @@ export default {
       const activeIndex = this.productSwiper.realIndex
       this.activeImgIndex = activeIndex
       console.log('activeIndex: ', activeIndex)
+    },
+    slideToImg (index) {
+      console.log('index: ', index)
+      console.log('this.productSwiper: ', this.productSwiper);
+      this.productSwiper.slideTo(index )
+      // this.productSwiper.autoplay.play()
+
     }
   }
 }
@@ -138,6 +145,7 @@ export default {
     height: 8px;
     border: solid 1px #dcdcdc;   
     margin-right: 12px;
+    cursor: pointer;
 
     &.active {
       border: solid 2px #21219c;
