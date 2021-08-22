@@ -27,7 +27,7 @@
       <div class="relative w-full">
         <div class="container flex justify-between items-center">
           <h1 class="h1-logo">
-            <nuxt-link to="/" class="navbar-logo">
+            <nuxt-link to="/" class="mobile-navbar-logo">
               侑欣科技設計整合有限公司
             </nuxt-link>
           </h1>
@@ -90,8 +90,18 @@ export default {
     white-space: nowrap;
     float:left;
     height: 45px;
-    // width: 40px;
-    // width: 104px;
+  }
+
+  .mobile-navbar-logo {
+
+    background-image: url('~assets/img/logo/logo_mobile.svg');
+    text-indent: 101%;
+    overflow:hidden;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    float:left;
+    height: 45px;
+
   }
   
   .desktop-nav {

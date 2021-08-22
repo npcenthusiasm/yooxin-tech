@@ -3,12 +3,12 @@
     <div class="news">
       <h2 class="text-4xl mb-10 text-center">最新消息</h2>
 
-      <ul class="news__list md:px-25">
-        <li v-for="(item, index) in items" :key="index" class="new-item flex flex-col md:flex-row py-6 md:py-9 border-t">
+      <ul class="news-list">
+        <li v-for="(item, index) in items" :key="index" class="news-item flex flex-col md:flex-row py-6 md:py-9 border-t">
           <div class="date mb-2 md:mb-0 md:mr-18 font-blod">
             {{ item.date }}
           </div>
-          <h3 class="title mb-2 md:mb-0 md:mr-23 font-medium">
+          <h3 class="title mb-2 md:mb-0  font-medium">
             {{ item.title }}
           </h3>
           <p class="desc text-dark-350">
@@ -35,13 +35,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/scss/rwd';
 
 .news-wrapper {
 
   .news {
     background-color: #fcfcfc;
 
-  &__list {
+  .news-list {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
       li {
         border-color: #dbdbdb;
   
@@ -53,7 +57,12 @@ export default {
   
     .news-item {
       .title {
-        flex-basis: 160px;
+        // flex-basis: 160px;
+
+        @include ipad {
+          flex-shrink: 0;
+          flex-basis: 160px;
+        }
       }
     }
   }
