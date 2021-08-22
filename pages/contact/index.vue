@@ -36,28 +36,28 @@
               <label class="title" for="name">
                 公司名稱
               </label>
-              <input id="name" type="text" name="name" class="ppearance-none">
+              <input id="name" type="text" name="name" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
             </div>
 
             <div class="mb-5">
               <label class="title" for="phone">
                 電話
               </label>
-              <input id="phone" type="text" name="phone" class="ppearance-none">
+              <input id="phone" type="text" name="phone" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
             </div>
 
             <div class="mb-5">
               <label class="title" for="email">
                 Email
               </label>
-              <input id="email" type="email" name="email" class="ppearance-none">
+              <input id="email" type="email" name="email" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline">
             </div>
 
             <div class="mb-13">
               <label class="title" for="content">
                 內容
               </label>
-              <textarea id="content" name="content" cols="30" rows="8" class="appearance-none" />
+              <textarea id="content" name="content" cols="30" rows="8" class="appearance-none border border-1 border-lightgraybr focus:outline-none focus:shadow-outline" />
             </div>
 
             <div class="text-right">
@@ -106,6 +106,7 @@ export default {}
   
     input, textarea {
       @apply w-full border rounded-sm bg-shonwhite border-lightgraybr pl-2;
+      border: 1px solid #dcdcdc;
       outline: none;
 
       &:focus {
