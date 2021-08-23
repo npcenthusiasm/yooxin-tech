@@ -73,12 +73,12 @@ export default {
       open: false,
 
       links: [
-        { name: '關於公司', to: 'about' },
-        { name: '服務內容', to: 'service' },
-        { name: '加工設備', to: 'equipment' },
-        { name: '品質檢驗流程', to: 'quality' },
-        { name: '合作客戶', to: 'client' },
-        { name: '聯繫我們', to: 'contact' }
+        { name: '關於公司', to: '/about' },
+        { name: '服務內容', to: '/service' },
+        { name: '加工設備', to: '/equipment' },
+        { name: '品質檢驗流程', to: '/quality' },
+        { name: '合作客戶', to: '/client' },
+        { name: '聯繫我們', to: '/contact' }
       ]
     }
   },
