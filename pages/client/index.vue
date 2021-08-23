@@ -43,7 +43,9 @@
               <div class="brand">{{ item.brand }}</div>
               <div class="title">{{ item.name }}</div>
               <h4 class="desc" >{{ item.item.term }} : {{ item.item.termName }} </h4>
-              <a :href="item.link" target="_blank" class="product-btn main-btn-hover">看看產品</a>
+              <div class="product-btn main-btn-hover flex justify-center items-center">
+                <a :href="item.link" target="_blank" class="block">看看產品</a>
+              </div>
             </div>
           </div>
         </div>
@@ -128,6 +130,7 @@ export default {
 
       @include ipad {
         align-items: flex-start;
+        margin-bottom: 0;
       }
 
 

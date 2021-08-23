@@ -22,7 +22,7 @@ export default {}
   img {
 
     @include ipad {
-      max-width: 580px;
+      max-width: 430px;
       margin: auto;
     }
   

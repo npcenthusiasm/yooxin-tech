@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-rows-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-10 md:gap-10 lg:gap-20 mb-17 md:mb-26 md:px-4 lg:px-0">
+  <div class="grid grid-rows-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-10 md:gap-10 lg:gap-20 mb-17 md:mb-26 md:px-4 lg:px-0">
   <!-- <div class="grid grid-rows-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-5 gap-y-10 md:gap-10 lg:gap-20 mb-17 md:mb-26 md:px-4 lg:px-0"> -->
     <div v-for="(item, i) in items" :key="i" class="">
       <div class="product">

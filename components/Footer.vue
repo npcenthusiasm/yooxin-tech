@@ -23,7 +23,7 @@
 
       <div class="pt-30 md:pt-11 text-sm text-black-300 text-center md:text-right">
         <!-- 侑欣科技設計整合有限公司<br> -->
-        <span class="inline-block text-xs mt-2">Copyright © yooxin-tech.com All Rights Reserved.</span>
+        <span class="footer-text inline-block text-xs mt-2">Copyright © yooxin-tech.com All Rights Reserved.</span>
       </div>
     </div>
   </div>
@@ -47,5 +47,9 @@ export default {
 
 .link-hover {
   /* 21219c */
+}
+
+.footer-text {
+  letter-spacing: 0.05em;
 }
 </style>
