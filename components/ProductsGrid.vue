@@ -11,7 +11,7 @@
 
         <div class="designInfo mt-3 xs:mt-4">
           <h3 class="font-medium">{{ item.name }}</h3>
-          <h3 class="desc text-dark-600 mt-2">{{ item.content }}</h3>
+          <!-- <h3 class="desc text-dark-600 mt-2">{{ item.content }}</h3> -->
         </div>
       </div>
     </div>

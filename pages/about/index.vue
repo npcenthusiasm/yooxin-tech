@@ -29,9 +29,9 @@
             侑欣設立於 2012 年，以 IC 代測加工廠起家，之後進入記憶體產業從事 FLASH IC、積體電路、晶片買賣等，在資訊電子業產銷分工結構模式中，扮演著橋樑角色。
           </p>
           <p class="mb-6">
-            2020 年為了能更全方位及服務更多客戶群，另再成立 3C 成品電子組裝部，提供成品組裝、品質檢驗、包裝出貨等服務。並建立完整的代工代料服務，包括產品資料核對、進料檢驗、倉儲及庫存管理、組裝、包裝、出貨檢驗。讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，提升產品競爭力。
+            2020 年為了能更全方位及服務更多客戶群，另再成立 3C 成品電子組裝部，四條生產線提供成品組裝、品質檢驗、包裝出貨等服務。並建立完整的代工代料服務，包括產品資料核對、進料檢驗、倉儲及庫存管理、組裝、包裝、出貨檢驗。讓客戶不需再依製程分包不同代工廠，減少品質管控上的風險，提升產品競爭力。
           </p>
-          <p>另外在 ID 設計、MD 設計、模具開發、塑膠射出上也都有專業團隊合作。</p>
+          <p>另外在 ID 設計、MD 設計、模具開發、塑膠射出上也都有專業團隊為您服務。</p>
         </div>
 
         <div style="height: 1px" class="mb-13 lg:mb-11 w-full bg-lightgraybr" />
@@ -70,13 +70,13 @@ export default {
       },
       imgs: [
         {
+          img: require('~/assets/img/aboutImg/about_03.jpeg')
+        },
+        {
           img: require('~/assets/img/aboutImg/about_01.jpeg')
         },
         {
           img: require('~/assets/img/aboutImg/about_02.jpeg')
-        },
-        {
-          img: require('~/assets/img/aboutImg/about_03.jpeg')
         }
       ],
       items: [
