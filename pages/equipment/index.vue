@@ -40,10 +40,10 @@ export default {
           img: require('../../assets/img/equipmentImg/device 06.jpeg'),
           name: '半自動沖壓機'
         },
-        {
-          img: require('../../assets/img/equipmentImg/device 15.jpg'),
-          name: '打端子機'
-        },
+        // {
+        //   img: require('../../assets/img/equipmentImg/device 15.jpg'),
+        //   name: '打端子機'
+        // },
         {
           img: require('../../assets/img/equipmentImg/device 07.jpeg'),
           name: '熱熔機'

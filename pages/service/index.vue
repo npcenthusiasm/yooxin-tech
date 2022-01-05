@@ -102,8 +102,8 @@ export default {
           content: '用適當的扭力鎖緊產品'
         },
         {
-          img: '',
-          // img: require('../../assets/img/serviceImg/compose 04.jpg'),
+          // img: '',
+          img: require('../../assets/img/serviceImg/compose 04.jpg'),
           name: '打端子',
           content: '簡易模具沖壓床加工、組裝、檢驗'
         },
