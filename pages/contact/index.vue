@@ -61,7 +61,8 @@
             </div>
 
             <div class="text-right">
-              <button @click.prevent="openMail" type="submit" class="second-btn-hover w-full lg:w-49 text-white border-2 border-deepblue bg-deepblue px-4 py-3">
+              <button @click.prevent="openMail" type="submit" class="w-full lg:w-49 text-white border-2 border-deepblue bg-deepblue px-4 py-3">
+              <!-- <button @click.prevent="openMail" type="submit" class="second-btn-hover w-full lg:w-49 text-white border-2 border-deepblue bg-deepblue px-4 py-3"> -->
                 提交
               </button>
             </div>
