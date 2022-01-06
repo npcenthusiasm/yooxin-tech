@@ -26,7 +26,7 @@ export default {
         },
         {
           img: require('../../assets/img/equipmentImg/device 03.jpeg'),
-          name: '自動收縮機'
+          name: '自動輸送帶'
         },
         {
           img: require('../../assets/img/equipmentImg/device 04.jpeg'),
